@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.glicemapapp.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentReportBinding
 
-class ReportFragment : Fragment() {
+class ReportFragment : ToolbarFragment() {
 
     private lateinit var reportViewModel: ReportViewModel
     private var _binding: FragmentReportBinding? = null

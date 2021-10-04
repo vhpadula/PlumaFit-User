@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.glicemapapp.R
+import com.applandeo.materialcalendarview.CalendarView
+import com.applandeo.materialcalendarview.EventDay
 import com.example.glicemapapp.databinding.FragmentHomeBinding
+import java.util.*
+import kotlin.collections.ArrayList
+
 
 class HomeFragment : Fragment() {
 
@@ -31,10 +33,12 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
+        val events: MutableList<EventDay> = ArrayList()
+        val calendar: Calendar = Calendar.getInstance()
+        events.add(EventDay(calendar, com.example.glicemapapp.R.drawable.ic_check_circle_black_24dp))
+        val calendarView: CalendarView = binding.calendarView as CalendarView
+        calendarView.setEvents(events)
         return root
     }
 

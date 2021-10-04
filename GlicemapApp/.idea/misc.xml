@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/activity_main.xml" value="0.1411764705882353" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/blue_toolbar.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/collapsing_toolbar.xml" value="0.18" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/collapsing_toolbar_blue.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/collapsing_toolbar_white.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_notifications.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_report.xml" value="0.2015625" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_settings.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/inner_toolbar.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/toolbar.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/vhpad/Desktop/GlicemapApp/app/src/main/res/drawable/bottom_nav_color_selector.xml" value="0.3828125" />
         <entry key="..\:/Users/vhpad/Desktop/GlicemapApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/vhpad/Desktop/GlicemapApp/app/src/main/res/layout/fragment_notifications.xml" value="0.20520833333333333" />

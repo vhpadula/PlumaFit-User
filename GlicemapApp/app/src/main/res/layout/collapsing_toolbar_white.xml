@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_size"
+    android:id="@+id/appBarWhite"
+    app:elevation="0dp"
+    android:background="@color/white">
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/innerToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:titleTextColor="@color/NavyBlue"
+            app:titleTextAppearance="@style/Toolbar.White"
+            android:layout_marginTop="@dimen/margin_medium_large"
+            app:navigationIcon="@drawable/arrow_back_ios_black_24dp_3">
+        </androidx.appcompat.widget.Toolbar>
+
+
+</com.google.android.material.appbar.AppBarLayout>

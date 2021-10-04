@@ -7,4 +7,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="DimmedBabyBlue">#88BFD7ED</color>
+    <color name="Transparent">#00000000</color>
 </resources>

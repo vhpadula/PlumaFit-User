@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">GlicemapApp</string>
+    <string name="app_name">Glicemap</string>
+
+    <!--BOTTOM NAVIGATION-->
     <string name="title_home">Início</string>
     <string name="title_report">Relatórios</string>
-    <string name="title_notifications">Notificações</string>
+    <string name="title_notifications">Lembretes</string>
     <string name="title_settings">Configurações</string>
+    <string name="welcome_text">Bem Vindo, %s!</string>
 </resources>
