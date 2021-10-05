@@ -1,4 +1,4 @@
-package com.example.glicemapapp.base
+package com.example.glicemapapp.ui.base
 
 import android.os.Bundle
 import android.view.View

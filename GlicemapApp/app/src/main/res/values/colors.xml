@@ -4,8 +4,10 @@
     <color name="BlueGrotto">#FF60A3D9</color>
     <color name="RoyalBlue">#FF0074B7</color>
     <color name="NavyBlue">#FF003B73</color>
+    <color name="TransparentNavyBlue">#88003B73</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="DimmedBabyBlue">#88BFD7ED</color>
     <color name="Transparent">#00000000</color>
+    <color name="Blacktext">#FF061E47</color>
 </resources>

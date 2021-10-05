@@ -1,9 +1,10 @@
-package com.example.glicemapapp
+package com.example.glicemapapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.glicemapapp.R
 import com.example.glicemapapp.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
