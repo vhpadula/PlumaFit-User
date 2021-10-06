@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">Glicemap</string>
 
-    <!--BOTTOM NAVIGATION-->
+    <!--NAVIGATION-->
     <string name="title_home">Início</string>
+    <string name="title_day">Dia</string>
     <string name="title_report">Relatórios</string>
     <string name="title_notifications">Lembretes</string>
     <string name="title_settings">Configurações</string>
     <string name="welcome_text">Bem Vindo, %s!</string>
+    <string name="new_measurement_label">Adicionar Registro</string>
+    <string name="measurement_label">Registro</string>
+
 
 
     <!--CALENDAR-->
@@ -40,8 +44,13 @@
     <string name="new_measurement_insulin">Insulina Aplicada:</string>
     <string name="new_measurement_insulin_unit">UI</string>
     <string name="new_measurement_notes">Anotações:</string>
-    <string name="new_measurement_label">Adicionar Registro</string>
-    <string name="new_measurement_notes_hint">Use esse espaço para anotar informações adicionais, como a realização de atividades físicas, alimentação, etc</string>
+    <string name="new_measurement_notes_hint">Use Use esse espaço para anotar informações adicionais, como a realização de atividades físicas, alimentação, etc</string>
+
+
+
+    <string name="measurement_day_title">Medições no dia<br>%s</br>,<br>%s</br></string>
+
+
 
 
 </resources>

@@ -4,24 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.navArgs
 import com.example.glicemapapp.R
-import com.example.glicemapapp.databinding.FragmentDayBottomSheetBinding
-import com.example.glicemapapp.databinding.FragmentMeasurementBottomSheetBinding
-import com.example.glicemapapp.databinding.FragmentNewMeasurementBinding
+import com.example.glicemapapp.databinding.FragmentDayBinding
 import com.example.glicemapapp.ui.base.ToolbarFragment
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.snackbar.Snackbar
 
 
-class DayBottomSheetFragment : BottomSheetDialogFragment() {
+class DayFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentDayBottomSheetBinding? = null
+    private var _binding: FragmentDayBinding? = null
     private val binding get() = _binding!!
+    private val args by navArgs<DayFragmentArgs>()
 
 
 
@@ -34,7 +31,7 @@ class DayBottomSheetFragment : BottomSheetDialogFragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentDayBottomSheetBinding.inflate(inflater, container, false)
+        _binding = FragmentDayBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
@@ -42,6 +39,12 @@ class DayBottomSheetFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val toolbar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.innerToolbar)
+
+
+        toolbar.title= args.date
+        toolbar.subtitle= args.weekDay
+        toolbar.navigationIcon = null
         setListeners()
     }
 

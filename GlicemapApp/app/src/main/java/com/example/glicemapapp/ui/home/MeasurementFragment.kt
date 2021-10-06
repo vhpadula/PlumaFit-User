@@ -4,22 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import androidx.lifecycle.ViewModelProvider
-import com.example.glicemapapp.R
-import com.example.glicemapapp.databinding.FragmentMeasurementBottomSheetBinding
-import com.example.glicemapapp.databinding.FragmentNewMeasurementBinding
+import com.example.glicemapapp.databinding.FragmentMeasurementBinding
 import com.example.glicemapapp.ui.base.ToolbarFragment
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.snackbar.Snackbar
 
 
-class MeasurementBottomSheetFragment : BottomSheetDialogFragment() {
+class MeasurementFragment : ToolbarFragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentMeasurementBottomSheetBinding? = null
+    private var _binding: FragmentMeasurementBinding? = null
     private val binding get() = _binding!!
 
 
@@ -33,7 +26,7 @@ class MeasurementBottomSheetFragment : BottomSheetDialogFragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentMeasurementBottomSheetBinding.inflate(inflater, container, false)
+        _binding = FragmentMeasurementBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root

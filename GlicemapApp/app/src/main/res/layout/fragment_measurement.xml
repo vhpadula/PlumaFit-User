@@ -7,41 +7,27 @@
     android:background="@drawable/rectangle_1"
     style="@style/AppBottomSheetDialogTheme">
 
-    <ImageView
-        android:id="@+id/handle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle_2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="@dimen/margin_medium_large"/>
-    <TextView
-        android:id="@+id/measurement_title_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/handle"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Medições no dia 13 de Setembro de 2021"
-        android:textSize="@dimen/text_subheading"
-        android:textColor="@color/NavyBlue"
-        android:layout_margin="@dimen/margin_medium"/>
+
+    <include
+        layout="@layout/collapsing_toolbar_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
     <View
+        android:id="@+id/div1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        android:id="@+id/div1"
-        app:layout_constraintTop_toBottomOf="@id/measurement_title_tv"
         android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_large_mediumX"/>
+        android:layout_marginBottom="@dimen/margin_large_mediumX"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/appBarWhite" />
 
     <TextView
         android:id="@+id/circumstance_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/div1"
-        app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/div1"        app:layout_constraintStart_toStartOf="parent"
         tools:text="Ocasião"
         android:textSize="@dimen/text_subheading"
         android:textColor="@color/NavyBlue"

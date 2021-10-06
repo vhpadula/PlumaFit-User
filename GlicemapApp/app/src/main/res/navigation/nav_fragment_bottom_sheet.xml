@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_bottom_sheet"
+    app:startDestination="@+id/navigation_day">
+
+    <fragment
+        android:id="@+id/navigation_day"
+        android:name="com.example.glicemapapp.ui.home.DayFragment"
+        android:label="@string/title_day"
+        tools:layout="@layout/fragment_day" >
+
+        <argument
+            android:name="date"
+            app:argType="string"/>
+
+        <argument
+            android:name="weekDay"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/to_measurement"
+            app:destination="@id/navigation_measurement"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/anim_close_scale"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_measurement"
+        android:name="com.example.glicemapapp.ui.home.MeasurementFragment"
+        android:label="@string/new_measurement_label"
+        tools:layout="@layout/fragment_measurement" />
+
+</navigation>
