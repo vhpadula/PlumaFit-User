@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
+import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.databinding.FragmentNewMeasurementBinding
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.google.android.material.snackbar.Snackbar
@@ -74,7 +76,33 @@ class NewMeasurementFragment : ToolbarFragment() {
                 val insulin = binding.insulinEt.text.toString()
                 val situation = binding.circumstanceSp.selectedItem.toString()
                 val observation = binding.notesEt.text.toString()
-                homeViewModel.registerMeasurement(sugarLevel, insulin, situation, observation)
+                sendData(sugarLevel,insulin,situation,observation)
+            }
+        }
+    }
+
+    private fun sendData(sugarLevel: String, insulin: String, situation: String, observation: String?) {
+        binding.progressBar.visibility = View.VISIBLE
+        binding.progressBar.bringToFront()
+        homeViewModel.registerMeasurement(sugarLevel,insulin,situation,observation).observe(viewLifecycleOwner){
+            binding.progressBar.visibility = View.INVISIBLE
+            val result = it?.let { result ->
+                when (result) {
+                    is Result.Success -> {
+                        result.data?.let {
+                            findNavController().navigate(NewMeasurementFragmentDirections.toHome())
+                            true
+                        } ?: false
+                    }
+                    is Result.Error -> {
+                        Snackbar.make(
+                            binding.root,
+                            result.exception.message.toString(),
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                        false
+                    }
+                }
             }
         }
     }

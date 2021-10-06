@@ -15,7 +15,7 @@
             android:id="@+id/to_new_measurement"
             app:destination="@id/navigation_new_measurement"
             app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/anim_close_scale"
+            app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_right"/>
 
@@ -25,7 +25,15 @@
         android:id="@+id/navigation_new_measurement"
         android:name="com.example.glicemapapp.ui.home.NewMeasurementFragment"
         android:label="@string/new_measurement_label"
-        tools:layout="@layout/fragment_new_measurement" />
+        tools:layout="@layout/fragment_new_measurement" >
+        <action
+            android:id="@+id/to_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_report"

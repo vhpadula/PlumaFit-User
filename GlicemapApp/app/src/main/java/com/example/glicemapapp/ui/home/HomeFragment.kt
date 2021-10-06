@@ -1,7 +1,6 @@
 package com.example.glicemapapp.ui.home
 
 import android.os.Bundle
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -82,10 +81,16 @@ class HomeFragment : Fragment() {
         }
         calendarView.setOnDayClickListener {
             val dialog = BottomSheetFragment()
-            val formatDate = SimpleDateFormat("dd 'de' MMMM 'de' yyyy", Locale("pt","BR"))
-            val formatWeekDay =  SimpleDateFormat("EEEE", Locale("pt","BR"))
-            dialog.date = formatDate.format(it.calendar.time)
+            val formatDateDay = SimpleDateFormat("dd", Locale("pt","BR"))
+            val formatDateMonth = SimpleDateFormat("MMMM", Locale("pt","BR"))
+            val formatDateYear = SimpleDateFormat("yyyy", Locale("pt","BR"))
+            val formatWeekDay =  SimpleDateFormat("EEEE", Locale ("pt","BR"))
+            val formatDateApi =  SimpleDateFormat("yyyy-MM-dd", Locale ("pt","BR"))
+            dialog.dateDay = formatDateDay.format(it.calendar.time)
+            dialog.dateMonth = formatDateMonth.format(it.calendar.time)
+            dialog.dateYear = formatDateYear.format(it.calendar.time)
             dialog.weekDay = formatWeekDay.format(it.calendar.time)
+            dialog.dateApi = formatDateApi.format(it.calendar.time)
             dialog.show(requireFragmentManager(),"ModalBottomSheet")
         }
     }

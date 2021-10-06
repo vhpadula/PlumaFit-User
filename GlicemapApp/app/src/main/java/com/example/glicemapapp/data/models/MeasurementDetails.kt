@@ -10,6 +10,6 @@ data class MeasurementDetails(
     @SerializedName("situation")
     val situation: String,
     @SerializedName("observations")
-    val observations: String
+    val observations: String?
 )
 

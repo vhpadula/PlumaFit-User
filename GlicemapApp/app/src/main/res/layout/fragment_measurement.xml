@@ -80,7 +80,7 @@ app:layout_constraintTop_toBottomOf="@id/div1"        app:layout_constraintStart
         app:layout_constraintTop_toBottomOf="@id/div2"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="98 mg/dl"
-        android:textSize="@dimen/text_subtitle"
+        android:textSize="@dimen/text_headline"
         android:textColor="@color/NavyBlue"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginEnd="@dimen/margin_medium_large"
@@ -146,6 +146,7 @@ app:layout_constraintTop_toBottomOf="@id/div1"        app:layout_constraintStart
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measurement_notes"
+        app:layout_constraintBaseline_toBaselineOf="@id/notes_et"
         style="bold"/>
 
     <TextView

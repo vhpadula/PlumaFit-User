@@ -44,11 +44,14 @@
     <string name="new_measurement_insulin">Insulina Aplicada:</string>
     <string name="new_measurement_insulin_unit">UI</string>
     <string name="new_measurement_notes">Anotações:</string>
-    <string name="new_measurement_notes_hint">Use Use esse espaço para anotar informações adicionais, como a realização de atividades físicas, alimentação, etc</string>
+    <string name="new_measurement_notes_hint">Use esse espaço para anotar informações adicionais, como a realização de atividades físicas, alimentação, etc</string>
+    <string name="measurement_title">%s %s de %s de %s</string>
 
 
 
-    <string name="measurement_day_title">Medições no dia<br>%s</br>,<br>%s</br></string>
+    <string name="measurement_insulin">Insulina: %s UI</string>
+    <string name="measurement_sugar_level_rv">%s</string>
+    <string name="measurement_sugar_level">%s mg/dl</string>
 
 
 

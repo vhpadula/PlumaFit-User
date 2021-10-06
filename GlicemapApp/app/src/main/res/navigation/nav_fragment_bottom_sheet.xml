@@ -12,18 +12,30 @@
         tools:layout="@layout/fragment_day" >
 
         <argument
-            android:name="date"
+            android:name="dateDay"
+            app:argType="string"/>
+
+        <argument
+            android:name="dateMonth"
+            app:argType="string"/>
+
+        <argument
+            android:name="dateYear"
             app:argType="string"/>
 
         <argument
             android:name="weekDay"
             app:argType="string"/>
 
+        <argument
+            android:name="dateApi"
+            app:argType="string"/>
+
         <action
             android:id="@+id/to_measurement"
             app:destination="@id/navigation_measurement"
             app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/anim_close_scale"
+            app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_right"/>
 
@@ -32,7 +44,41 @@
     <fragment
         android:id="@+id/navigation_measurement"
         android:name="com.example.glicemapapp.ui.home.MeasurementFragment"
-        android:label="@string/new_measurement_label"
-        tools:layout="@layout/fragment_measurement" />
+        tools:layout="@layout/fragment_measurement" >
+
+        <argument
+            android:name="dateDay"
+            app:argType="string"/>
+
+        <argument
+            android:name="dateMonth"
+            app:argType="string"/>
+
+        <argument
+            android:name="dateYear"
+            app:argType="string"/>
+
+        <argument
+            android:name="weekDay"
+            app:argType="string"/>
+
+        <argument
+            android:name="situation"
+            app:argType="string"/>
+
+        <argument
+            android:name="sugarLevel"
+            app:argType="string"/>
+
+        <argument
+            android:name="insulin"
+            app:argType="string"/>
+
+        <argument
+            android:name="observations"
+            app:argType="string"
+            app:nullable="true"/>
+
+    </fragment>
 
 </navigation>
