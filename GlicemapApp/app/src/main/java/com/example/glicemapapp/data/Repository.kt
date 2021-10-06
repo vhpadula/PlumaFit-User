@@ -12,9 +12,22 @@ object Repository  {
 
     private val service by lazy { RetrofitBuilder.buildApiService()}
 
-    fun getMeasurements(cep: String) = liveData {
+    fun getMeasurementDates(cpf: String, date: String) = liveData {
         try {
-            val response = service.getMeasurements(cep)
+            val response = service.getMeasurementDates(cpf,date)
+            if(response.isSuccessful){
+                emit(Result.Success(data = response.body()))
+            } else {
+                emit(Result.Error(exception = Exception("Falha ao buscar o endereco")))
+            }
+        } catch (e: Exception) {
+            emit(Result.Error(exception = e))
+        }
+    }
+
+    fun getMeasurementDetails(cpf: String, date: String) = liveData {
+        try {
+            val response = service.getMeasurementDetails(cpf,date)
             if(response.isSuccessful){
                 emit(Result.Success(data = response.body()))
             } else {

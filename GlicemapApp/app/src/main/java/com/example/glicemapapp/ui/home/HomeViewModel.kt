@@ -1,36 +1,53 @@
 package com.example.glicemapapp.ui.home
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.applandeo.materialcalendarview.EventDay
-import com.example.contadormtg.models.Measurement
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Repository
 import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.models.DateList
+import com.example.glicemapapp.data.models.Measurement
+import okhttp3.Response
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
 class HomeViewModel : ViewModel() {
     private val repository = Repository
-    var measurements = listOf<Measurement?>()
+    private var currentDate = LocalDate.now()
 
+    fun loadDates(addMonth: Int): LiveData<Result<DateList?>> {
+        val month = currentDate.monthValue+addMonth
+        currentDate = LocalDate.of(2021,month,1)
+        val date = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+        return repository.getMeasurementDates("22949837859", date)
+    }
 
-//     fun loadData() : LiveData<Result<Measurement?>> = repository.getMeasurements("123")
-     fun loadData() : LiveData<Result<List<Measurement?>?>> = repository.getMeasurements("123")
-
-    fun setCalendarData(measurements: List<Measurement?>): MutableList<EventDay>{
-        this.measurements = measurements
-        val locale = Locale ("pt", "BR")
-        val sdf = SimpleDateFormat("dd-MM-yyyy", locale)
+    fun setCalendarData(_dates: DateList): MutableList<EventDay> {
+        val dates = _dates.dates
+        val sdf = SimpleDateFormat("yyyy-MM-dd")
         val events: MutableList<EventDay> = ArrayList()
-        measurements.forEach { measurement ->
+        dates.forEach { date ->
             val calendar = Calendar.getInstance()
-            calendar.time = sdf.parse(measurement!!.date)
+            calendar.time = sdf.parse(date)
             events.add(EventDay(calendar, R.drawable.ic_done_white_24dp))
         }
         return events
+    }
+
+    fun registerMeasurement(
+        sugarLevel: String,
+        insulin: String,
+        situation: String,
+        observations: String
+    ) {
+        val today = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+        val newMeasurement =
+            Measurement(today, sugarLevel, insulin, situation, observations)
     }
 
 

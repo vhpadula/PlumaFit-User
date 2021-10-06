@@ -1,6 +1,4 @@
-package com.example.contadormtg.models
-
-import com.google.gson.annotations.SerializedName
+package com.example.glicemapapp.data.models
 
 data class Measurement(
     val date: String,
@@ -9,4 +7,3 @@ data class Measurement(
     val situation: String,
     val observations: String
 )
-
