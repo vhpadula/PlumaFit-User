@@ -97,7 +97,7 @@ class NewMeasurementFragment : ToolbarFragment() {
                     is Result.Error -> {
                         Snackbar.make(
                             binding.root,
-                            result.exception.message.toString(),
+                            "Erro de conexão",
                             Snackbar.LENGTH_LONG
                         ).show()
                         false

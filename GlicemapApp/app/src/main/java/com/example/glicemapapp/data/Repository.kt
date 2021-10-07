@@ -10,14 +10,14 @@ sealed class Result<out R> {
     data class Error(val exception: Exception) : Result<Nothing>()
 }
 
-object Repository  {
+object Repository {
 
-    private val service by lazy { RetrofitBuilder.buildApiService()}
+    private val service by lazy { RetrofitBuilder.buildApiService() }
 
     fun getMeasurementDates(cpf: String, date: String) = liveData {
         try {
-            val response = service.getMeasurementDates(cpf,date)
-            if(response.isSuccessful){
+            val response = service.getMeasurementDates(cpf, date)
+            if (response.isSuccessful) {
                 emit(Result.Success(data = response.body()))
             } else {
                 emit(Result.Error(exception = Exception("Houve uma falha ao buscar as medidas, tente novamente mais tarde")))
@@ -29,8 +29,8 @@ object Repository  {
 
     fun getMeasurementDetails(cpf: String, date: String) = liveData {
         try {
-            val response = service.getMeasurementDetails(cpf,date)
-            if(response.isSuccessful){
+            val response = service.getMeasurementDetails(cpf, date)
+            if (response.isSuccessful) {
                 emit(Result.Success(data = response.body()))
             } else {
                 emit(Result.Error(exception = Exception("Houve uma falha ao buscar as medidas, tente novamente mais tarde")))
@@ -42,11 +42,24 @@ object Repository  {
 
     fun sendMeasurement(cpf: String, date: String, measure: MeasurementDetails) = liveData {
         try {
-            val response = service.sendMeasurement(SendMeasureRequest( cpf,date, measure))
-            if(response.isSuccessful){
+            val response = service.sendMeasurement(SendMeasureRequest(cpf, date, measure))
+            if (response.isSuccessful) {
                 emit(Result.Success(data = response.body()))
             } else {
                 emit(Result.Error(exception = Exception("Houve uma falha ao enviar a medida, tente novamente mais tarde")))
+            }
+        } catch (e: Exception) {
+            emit(Result.Error(exception = e))
+        }
+    }
+
+    fun getUser(cpf: String) = liveData {
+        try {
+            val response = service.getUser(cpf)
+            if (response.isSuccessful) {
+                emit(Result.Success(data = response.body()))
+            } else {
+                emit(Result.Error(exception = Exception("Houve uma falha ao buscar as medidas, tente novamente mais tarde")))
             }
         } catch (e: Exception) {
             emit(Result.Error(exception = e))

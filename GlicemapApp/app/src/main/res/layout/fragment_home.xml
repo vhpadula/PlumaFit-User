@@ -19,7 +19,7 @@
         android:textColor="@color/white"
         android:layout_margin="@dimen/margin_medium_large"
         android:text="@string/welcome_text"
-        style="bold"/>
+        android:textStyle="bold"/>
 
     <ProgressBar
         android:id="@+id/progressBar"

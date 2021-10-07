@@ -17,7 +17,8 @@
             app:titleTextColor="@color/white"
             android:layout_marginTop="@dimen/margin_medium_large"
             app:titleTextAppearance="@style/Toolbar.Blue"
-            app:navigationIcon="@drawable/arrow_back_ios_black_24dp">
+            app:navigationIcon="@drawable/arrow_back_ios_black_24dp"
+            app:contentInsetStartWithNavigation="0dp">
         </androidx.appcompat.widget.Toolbar>
 
 </com.google.android.material.appbar.AppBarLayout>

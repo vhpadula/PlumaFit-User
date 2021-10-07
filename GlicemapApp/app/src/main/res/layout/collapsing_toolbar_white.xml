@@ -6,6 +6,8 @@
     android:layout_height="@dimen/toolbar_size"
     android:id="@+id/appBarWhite"
     app:elevation="0dp"
+
+
     android:background="@color/white">
 
 
@@ -18,7 +20,9 @@
             app:subtitleTextColor="@color/BlueGrotto"
             app:titleTextAppearance="@style/Toolbar.White"
             android:layout_marginTop="@dimen/margin_medium_large"
-            app:navigationIcon="@drawable/arrow_back_ios_black_24dp_3">
+            app:navigationIcon="@drawable/arrow_back_ios_black_24dp_3"
+
+            app:contentInsetStartWithNavigation="0dp">
         </androidx.appcompat.widget.Toolbar>
 
 

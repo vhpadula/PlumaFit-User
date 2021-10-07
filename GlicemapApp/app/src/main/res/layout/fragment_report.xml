@@ -9,18 +9,76 @@
 
     <include layout="@layout/collapsing_toolbar_white"/>
 
+    <TextView
+        android:id="@+id/start_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Inicial"
+        android:textSize="@dimen/text_headline"
+        android:textColor="@color/NavyBlue"
+        app:layout_constraintTop_toBottomOf="@id/appBarWhite"
+        android:layout_marginTop="@dimen/margin_Xlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_medium_large"/>
 
     <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
+        android:id="@+id/start_date_dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        app:layout_constraintTop_toBottomOf="@id/start_date_tv"
+        app:layout_constraintStart_toStartOf="@id/start_date_tv"
+        android:textSize="@dimen/text_subtitle"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:backgroundTint="@color/NavyBlue"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/NavyBlue"/>
+
+    <TextView
+        android:id="@+id/end_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Final"
+        android:textSize="@dimen/text_headline"
+        android:textColor="@color/NavyBlue"
+        app:layout_constraintTop_toBottomOf="@id/start_date_dp"
+        android:layout_marginTop="@dimen/margin_XXlarge"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="@dimen/margin_medium_large"/>
+
+    <TextView
+        android:id="@+id/end_date_dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        app:layout_constraintTop_toBottomOf="@id/end_date_tv"
+        app:layout_constraintStart_toStartOf="@id/end_date_tv"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:backgroundTint="@color/NavyBlue"
+        android:clickable="false"
+        android:textSize="@dimen/text_subtitle"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/NavyBlue"/>
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_measurement_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/white"
+        android:src="@drawable/ic_share_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/end_date_dp"
+        android:layout_marginEnd="@dimen/margin_medium_large"
+        android:backgroundTint="@color/BlueGrotto"
+        android:background="@color/BlueGrotto"
+        app:borderWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

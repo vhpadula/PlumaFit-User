@@ -9,6 +9,7 @@ import com.example.glicemapapp.data.Repository
 import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.data.models.DatesResponse
 import com.example.glicemapapp.data.models.MeasurementDetailResponse
+import com.example.glicemapapp.data.models.User
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -18,6 +19,7 @@ import java.util.*
 class HomeViewModel : ViewModel() {
     private val repository = Repository
     private var currentDate = LocalDate.now()
+    lateinit var user: User
 
     fun loadDates(addMonth: Int): LiveData<Result<DatesResponse?>> {
         val month = currentDate.monthValue + addMonth

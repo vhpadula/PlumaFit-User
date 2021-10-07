@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.GlicemapApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.GlicemapApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/RoyalBlue</item>
+        <item name="colorPrimaryDark">@color/RoyalBlue</item>
+        <item name="colorAccent">@color/RoyalBlue</item>
         <item name="colorPrimaryVariant">@color/NavyBlue</item>
         <item name="colorOnPrimary">@color/white</item>
 

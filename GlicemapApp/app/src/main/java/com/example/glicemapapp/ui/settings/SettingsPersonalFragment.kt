@@ -7,16 +7,18 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentSettingsBinding
+import com.example.glicemapapp.databinding.FragmentSettingsPersonalBinding
 import com.example.glicemapapp.ui.MainActivity
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
 
-class SettingsFragment : ToolbarFragment() {
+class SettingsPersonalFragment : ToolbarFragment() {
 
     private lateinit var settingsViewModel: SettingsViewModel
-    private var _binding: FragmentSettingsBinding? = null
+    private var _binding: FragmentSettingsPersonalBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -30,14 +32,12 @@ class SettingsFragment : ToolbarFragment() {
         settingsViewModel =
             ViewModelProvider(this).get(SettingsViewModel::class.java)
 
-        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        _binding = FragmentSettingsPersonalBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val activity = requireActivity() as MainActivity
-        binding.personalNameTv.text = activity.user.name
-        binding.personalEmailTv.text = activity.user.email
-        binding.personalMinTv.text = context?.getString(R.string.settings_sugar_min_level,activity.user.sugarMin)
-        binding.personalMaxTv.text = context?.getString(R.string.settings_sugar_max_level,activity.user.sugarMax)
-        binding.doctorNameTv.text = "Cadastre seu Médico"
+       val sdf =  SimpleDateFormat("dd/MM/yyyy")
+        binding.nameEt.setText(activity.user.name)
+        binding.birthdayEt.setText(sdf.format(activity.user.birthdate))
         setListeners()
         return root
     }
@@ -49,13 +49,7 @@ class SettingsFragment : ToolbarFragment() {
 
     private fun setListeners(){
         binding.run{
-            personal.setOnClickListener {
-                findNavController().navigate(SettingsFragmentDirections.toPersonal())
-            }
 
-            doctor.setOnClickListener {
-
-            }
         }
     }
 }

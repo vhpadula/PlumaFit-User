@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppBottomSheetDialogTheme"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/rectangle_1"
-    style="@style/AppBottomSheetDialogTheme">
+    android:background="@drawable/rectangle_1">
 
 
     <include
@@ -25,91 +25,93 @@
 
     <TextView
         android:id="@+id/circumstance_tv"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-app:layout_constraintTop_toBottomOf="@id/div1"        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Ocasião"
-        android:textSize="@dimen/text_subheading"
-        android:textColor="@color/NavyBlue"
+        android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_large_mediumX"
         android:layout_marginBottom="@dimen/margin_large_mediumX"
-        android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measure_circumstance"
-        style="bold"/>
+        android:textColor="@color/NavyBlue"
+        android:textSize="@dimen/text_subheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div1"
+        tools:text="Ocasião" />
 
     <TextView
         android:id="@+id/circumstance_sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/margin_large_mediumX"
-        android:layout_marginBottom="@dimen/margin_large_mediumX"
         android:layout_marginEnd="@dimen/margin_medium_large"
-        android:textColorHighlight="@color/TransparentNavyBlue"
+        android:layout_marginBottom="@dimen/margin_large_mediumX"
         android:textColor="@color/Blacktext"
+        android:textColorHighlight="@color/TransparentNavyBlue"
         android:textSize="@dimen/text_subtitle"
-        tools:text="Antes do Almoço"
-        app:layout_constraintTop_toBottomOf="@id/div1"/>
+        app:layout_constraintBaseline_toBaselineOf="@id/circumstance_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div1"
+        tools:text="Antes do Almoço" />
 
     <View
+        android:id="@+id/div2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:background="@android:color/darker_gray"
-        android:id="@+id/div2"
-        app:layout_constraintTop_toBottomOf="@id/circumstance_tv"
-        android:layout_marginVertical="@dimen/margin_large_mediumX"/>
+        app:layout_constraintTop_toBottomOf="@id/circumstance_tv" />
 
     <TextView
         android:id="@+id/sugar_level_tv"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/div2"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Glicemia"
-        android:textSize="@dimen/text_subheading"
-        android:textColor="@color/NavyBlue"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measure_sugar_level"
-        style="bold"/>
+        android:textColor="@color/NavyBlue"
+        android:textSize="@dimen/text_subheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div2"
+        tools:text="Glicemia" />
 
     <TextView
         android:id="@+id/sugar_level_et_tv"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/div2"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="98 mg/dl"
-        android:textSize="@dimen/text_headline"
-        android:textColor="@color/NavyBlue"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginEnd="@dimen/margin_medium_large"
+        android:textColor="@color/NavyBlue"
+        android:textSize="@dimen/text_headline"
+        app:layout_constraintBaseline_toBaselineOf="@id/sugar_level_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div2"
 
-        style="bold"/>
-
+        tools:text="98 mg/dl" />
 
 
     <View
+        android:id="@+id/div3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:background="@android:color/darker_gray"
-        android:id="@+id/div3"
-        app:layout_constraintTop_toBottomOf="@id/sugar_level_tv"
-        android:layout_marginVertical="@dimen/margin_large_mediumX"/>
+        app:layout_constraintTop_toBottomOf="@id/sugar_level_tv" />
 
     <TextView
         android:id="@+id/insulin_tv"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/div3"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Insulina Aplicada:"
-        android:textSize="@dimen/text_subheading"
-        android:textColor="@color/NavyBlue"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measurement_insulin"
-        style="bold"/>
+        android:textColor="@color/NavyBlue"
+        android:textSize="@dimen/text_subheading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div3"
+        tools:text="Insulina Aplicada:" />
 
     <TextView
         android:id="@+id/insulin_et_tv"
@@ -120,46 +122,47 @@ app:layout_constraintTop_toBottomOf="@id/div1"        app:layout_constraintStart
         android:layout_marginEnd="@dimen/margin_medium_large"
         android:textColor="@color/NavyBlue"
         android:textSize="@dimen/text_headline"
+        app:layout_constraintBaseline_toBaselineOf="@id/insulin_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div3"
         tools:text="1 UI" />
 
 
-
     <View
+        android:id="@+id/div4"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:background="@android:color/darker_gray"
-        android:id="@+id/div4"
-        app:layout_constraintTop_toBottomOf="@id/insulin_tv"
-        android:layout_marginVertical="@dimen/margin_large_mediumX"/>
+        app:layout_constraintTop_toBottomOf="@id/insulin_tv" />
 
     <TextView
         android:id="@+id/notes_tv"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/div4"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Anotações"
-        android:textSize="@dimen/text_subheading"
-        android:textColor="@color/NavyBlue"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measurement_notes"
+        android:textColor="@color/NavyBlue"
+        android:textSize="@dimen/text_subheading"
         app:layout_constraintBaseline_toBaselineOf="@id/notes_et"
-        style="bold"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div4"
+        tools:text="Anotações" />
 
     <TextView
         android:id="@+id/notes_et"
         android:layout_width="200dp"
         android:layout_height="150dp"
+        android:layout_marginVertical="@dimen/margin_medium"
         android:layout_marginEnd="@dimen/margin_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/div4"
-        android:textColor="@color/NavyBlue"
         android:gravity="center"
+        android:textColor="@color/NavyBlue"
+        android:textSize="@dimen/text_subtitle"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginVertical="@dimen/margin_medium"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

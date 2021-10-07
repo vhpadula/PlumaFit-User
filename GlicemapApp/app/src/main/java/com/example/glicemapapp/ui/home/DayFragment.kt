@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.models.MeasurementDetailResponse
 import com.example.glicemapapp.databinding.FragmentDayBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -76,6 +77,7 @@ class DayFragment : Fragment() {
                             result.exception.message.toString(),
                             Snackbar.LENGTH_LONG
                         ).show()
+                        binding.noMeasures.visibility= View.VISIBLE
                         false
                     }
                 }

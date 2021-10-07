@@ -9,8 +9,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.applandeo.materialcalendarview.CalendarView
 import com.applandeo.materialcalendarview.EventDay
+import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.models.DatesResponse
 import com.example.glicemapapp.databinding.FragmentHomeBinding
+import com.example.glicemapapp.ui.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
@@ -31,11 +34,12 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         setListeners()
         loadDates(0)
+        val activity = requireActivity() as MainActivity
+        binding.welcomeText.text = context?.getString(R.string.welcome_text,activity.user.name)
         return root
     }
 
@@ -60,9 +64,10 @@ class HomeFragment : Fragment() {
                     is Result.Error -> {
                         Snackbar.make(
                             binding.root,
-                            result.exception.message.toString(),
+                            "Erro de conexão",
                             Snackbar.LENGTH_LONG
                         ).show()
+                        setCalendar(homeViewModel.setCalendarData(DatesResponse(listOf("01-01-2000"))))
                         false
                     }
                 }
