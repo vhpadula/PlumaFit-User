@@ -5,22 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/notifications"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="@color/RoyalBlue">
 
     <include layout="@layout/collapsing_toolbar_blue"/>
 
-
-    <TextView
-        android:id="@+id/text_notifications"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notifications_rv"
         android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toBottomOf="@+id/appBarBlue"
+        android:layout_marginTop="@dimen/margin_large_mediumX"
+        android:padding="@dimen/margin_medium"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_measurement_bt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        app:tint="@color/white"
+        android:src="@drawable/ic_add_white_24dp"
+        app:layout_constraintTop_toBottomOf="@id/notifications_rv"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="@dimen/margin_medium_large"
+        android:layout_marginEnd="@dimen/margin_medium_large"
+        android:backgroundTint="@color/BlueGrotto"
+        android:background="@color/BlueGrotto"
+        app:borderWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

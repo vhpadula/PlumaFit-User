@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_start"
-        android:name="com.example.glicemapapp.ui.home.StartFragment"/>
+        android:name="com.example.glicemapapp.ui.home.StartFragment" />
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.glicemapapp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/to_new_measurement"
@@ -21,7 +21,7 @@
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
 
@@ -29,14 +29,14 @@
         android:id="@+id/navigation_new_measurement"
         android:name="com.example.glicemapapp.ui.home.NewMeasurementFragment"
         android:label="@string/new_measurement_label"
-        tools:layout="@layout/fragment_new_measurement" >
+        tools:layout="@layout/fragment_new_measurement">
         <action
             android:id="@+id/to_home"
             app:destination="@id/navigation_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_left"/>
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
 
     <fragment
@@ -49,13 +49,37 @@
         android:id="@+id/navigation_notifications"
         android:name="com.example.glicemapapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/to_new_notification"
+            app:destination="@id/navigation_new_notification"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_new_notification"
+        android:name="com.example.glicemapapp.ui.notifications.NewNotificationsFragment"
+        android:label="Adicionar Lembrete">
+
+        <action
+            android:id="@+id/to_notification"
+            app:destination="@id/navigation_notifications"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.example.glicemapapp.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
-        tools:layout="@layout/fragment_settings" >
+        tools:layout="@layout/fragment_settings">
 
         <action
             android:id="@+id/to_personal"
@@ -63,11 +87,37 @@
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/to_new_doctor"
+            app:destination="@id/navigation_settings_new_doctor"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/to_delete_doctor"
+            app:destination="@id/navigation_settings_delete_doctor"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_settings_personal"
         android:name="com.example.glicemapapp.ui.settings.SettingsPersonalFragment"
         android:label="Dados Pessoais" />
+
+    <fragment
+        android:id="@+id/navigation_settings_new_doctor"
+        android:name="com.example.glicemapapp.ui.settings.SettingsNewDoctorFragment"
+        android:label="Meu Médico" />
+
+    <fragment
+        android:id="@+id/navigation_settings_delete_doctor"
+        android:name="com.example.glicemapapp.ui.settings.SettingsDeleteDoctorFragment"
+        android:label="Meu Médico" />
 </navigation>

@@ -33,11 +33,25 @@ class SettingsFragment : ToolbarFragment() {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val activity = requireActivity() as MainActivity
+
+        if (activity.doctor.documentNumber != null) {
+            binding.doctorNameTv.text = activity.doctor.name
+            binding.doctorNameTv.visibility = View.VISIBLE
+            binding.doctorEmailTv.text = activity.doctor.email
+            binding.doctorEmailTv.visibility = View.VISIBLE
+            binding.doctorCrmTv.text = activity.doctor.documentNumber
+            binding.doctorCrmTv.visibility = View.VISIBLE
+        } else {
+            binding.doctorNameTv.text = "Cadastre seu Médico"
+        }
+
         binding.personalNameTv.text = activity.user.name
         binding.personalEmailTv.text = activity.user.email
-        binding.personalMinTv.text = context?.getString(R.string.settings_sugar_min_level,activity.user.sugarMin)
-        binding.personalMaxTv.text = context?.getString(R.string.settings_sugar_max_level,activity.user.sugarMax)
-        binding.doctorNameTv.text = "Cadastre seu Médico"
+        binding.personalMinTv.text =
+            context?.getString(R.string.settings_sugar_min_level, activity.user.sugarMin)
+        binding.personalMaxTv.text =
+            context?.getString(R.string.settings_sugar_max_level, activity.user.sugarMax)
+
         setListeners()
         return root
     }
@@ -47,13 +61,19 @@ class SettingsFragment : ToolbarFragment() {
         _binding = null
     }
 
-    private fun setListeners(){
-        binding.run{
+    private fun setListeners() {
+        val activity = requireActivity() as MainActivity
+        binding.run {
             personal.setOnClickListener {
                 findNavController().navigate(SettingsFragmentDirections.toPersonal())
             }
 
             doctor.setOnClickListener {
+                if (activity.doctor.documentNumber != null) {
+                    findNavController().navigate(SettingsFragmentDirections.toDeleteDoctor())
+                } else {
+                    findNavController().navigate(SettingsFragmentDirections.toNewDoctor())
+                }
 
             }
         }

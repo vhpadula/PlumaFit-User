@@ -11,16 +11,17 @@ import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentSettingsBinding
+import com.example.glicemapapp.databinding.FragmentSettingsNewDoctorBinding
 import com.example.glicemapapp.databinding.FragmentSettingsPersonalBinding
 import com.example.glicemapapp.ui.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
 
-class SettingsPersonalFragment : ToolbarFragment() {
+class SettingsNewDoctorFragment : ToolbarFragment() {
 
     private lateinit var settingsViewModel: SettingsViewModel
-    private var _binding: FragmentSettingsPersonalBinding? = null
+    private var _binding: FragmentSettingsNewDoctorBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -34,21 +35,9 @@ class SettingsPersonalFragment : ToolbarFragment() {
         settingsViewModel =
             ViewModelProvider(this).get(SettingsViewModel::class.java)
 
-        _binding = FragmentSettingsPersonalBinding.inflate(inflater, container, false)
+        _binding = FragmentSettingsNewDoctorBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val activity = requireActivity() as MainActivity
-        val sdfApi = SimpleDateFormat("yyyy-MM-dd")
-        val sdf = SimpleDateFormat("dd/MM/yyyy")
-        binding.nameEt.setText(activity.user.name)
-        val date =   sdfApi.parse(activity.user.birthdate)
-        binding.birthdayEt.setText(
-            sdf.format(date)
-        )
-        binding.heightEt.setText(activity.user.height)
-        binding.weightEt.setText(activity.user.weight)
-        binding.minEt.setText(activity.user.sugarMin)
-        binding.maxEt.setText(activity.user.sugarMax)
-        binding.emailEt.setText(activity.user.email)
+
         setListeners()
         return root
     }
@@ -61,19 +50,6 @@ class SettingsPersonalFragment : ToolbarFragment() {
     private fun setListeners() {
         binding.run {
             saveButton.setOnClickListener {
-                if(!binding.passwordEt.text.isNullOrEmpty()){
-                    if(binding.passwordEt.text == binding.newPasswordEt.text ){
-                        findNavController().navigateUp()
-                    } else {
-                        Snackbar.make(
-                            binding.root,
-                            "'Confirmar Nova Senha' deve conter a mesma senha que 'Nova Senha'",
-                            Snackbar.LENGTH_LONG
-                        ).show()
-                    }
-                }
-
-
             }
         }
     }

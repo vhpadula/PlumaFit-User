@@ -20,7 +20,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -38,7 +39,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/birthday_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="date"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -56,7 +58,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/height_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -74,7 +77,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/weight_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -93,7 +97,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/min_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -111,7 +116,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/max_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -141,13 +147,14 @@
         android:layout_marginTop="@dimen/text_subheading"
         app:layout_constraintEnd_toEndOf="parent"
         app:boxBackgroundColor="@color/Transparent"
-        android:hint="Senha Atual"
+        android:hint="Nova Senha"
         app:hintTextColor="@color/NavyBlue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -159,13 +166,14 @@
         android:layout_marginTop="@dimen/text_subheading"
         app:layout_constraintEnd_toEndOf="parent"
         app:boxBackgroundColor="@color/Transparent"
-        android:hint="Nova Senha"
+        android:hint="Confirmar Nova Senha"
         app:hintTextColor="@color/NavyBlue">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/new_password_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

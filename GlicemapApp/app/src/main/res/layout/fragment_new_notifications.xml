@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/RoyalBlue">
+
+
+
+    <include layout="@layout/collapsing_toolbar_blue"/>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        app:layout_constraintTop_toBottomOf="@id/appBarBlue"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_large"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/name_tv"
+        app:layout_constraintStart_toStartOf="parent"
+   android:layout_marginStart="@dimen/margin_large"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horário"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+      app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_large"/>
+
+
+
+        <TextView
+            android:id="@+id/time_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:textSize="@dimen/text_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/time_tv"
+            app:layout_constraintStart_toStartOf="@id/time_tv"
+            android:textColorHighlight="@color/white"
+            android:backgroundTint="@color/NavyBlue"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+
+            android:textColor="@color/white"/>
+
+
+
+
+    <TextView
+        android:id="@+id/repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_subtitle"
+        android:text="Repetir:"
+        app:layout_constraintTop_toBottomOf="@id/time_et"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/time_et"
+       android:layout_marginVertical="@dimen/text_subtitle"/>
+
+    <LinearLayout
+        android:id="@+id/checkboxes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_subheading"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/repeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dom"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/dom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seg"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/seg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ter"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/ter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qua"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/qua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qui"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/qui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sex"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sab"
+                android:textColor="@color/white"/>
+            <CheckBox
+                android:id="@+id/sab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:id="@+id/save_button"
+        android:backgroundTint="@color/NavyBlue"
+        app:layout_constraintTop_toBottomOf="@id/checkboxes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_Xlarge"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

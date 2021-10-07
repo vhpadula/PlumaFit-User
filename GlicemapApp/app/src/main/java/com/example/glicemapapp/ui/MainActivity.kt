@@ -9,6 +9,7 @@ import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Repository
 import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.data.models.DatesResponse
+import com.example.glicemapapp.data.models.Doctor
 import com.example.glicemapapp.data.models.User
 import com.example.glicemapapp.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
     private val repository = Repository
     private val cpf = "22949837859"
     lateinit var user: User
+
+//    var doctor = Doctor(null,null,null)
+
+    var doctor = Doctor ("1234567", "Gustavo Trivelatto", "gu.trivelatto@usp.br")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

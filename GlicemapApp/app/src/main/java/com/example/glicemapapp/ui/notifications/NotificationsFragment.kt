@@ -7,17 +7,28 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.contadormtg.extracountersrv.ItemDragListener
+import com.example.contadormtg.extracountersrv.ItemTouchHelperCallback
+import com.example.glicemapapp.data.models.Notification
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : ToolbarFragment() {
+class NotificationsFragment : ToolbarFragment(), ItemDragListener {
 
     private lateinit var notificationsViewModel: NotificationsViewModel
     private var _binding: FragmentNotificationsBinding? = null
+    private lateinit var itemTouchHelper: ItemTouchHelper
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var adapter: NotificationsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,20 +36,42 @@ class NotificationsFragment : ToolbarFragment() {
         savedInstanceState: Bundle?
     ): View? {
         notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(NotificationsViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        setAdapter()
+        setupItemTouchHelper()
+        binding.newMeasurementBt.setOnClickListener {
+            findNavController().navigate(NotificationsFragmentDirections.toNewNotification())
+        }
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onItemDrag(viewHolder: RecyclerView.ViewHolder) {
+        itemTouchHelper.startDrag(viewHolder)
+    }
+
+    override fun onItemSwipe(viewHolder: RecyclerView.ViewHolder) {
+        itemTouchHelper.startSwipe(viewHolder)
+    }
+
+    private fun setAdapter(){
+        adapter = NotificationsAdapter(context = requireContext(), this)
+        adapter.items = notificationsViewModel.items
+        binding.run {
+            notificationsRv.adapter = adapter
+            notificationsRv.layoutManager = LinearLayoutManager(requireContext())
+        }
+    }
+
+    private fun setupItemTouchHelper() {
+        itemTouchHelper = ItemTouchHelper(ItemTouchHelperCallback(adapter))
+        itemTouchHelper.attachToRecyclerView(binding.notificationsRv)
     }
 }
