@@ -1,9 +1,12 @@
 package com.example.glicemapapp.data
 
+import android.os.Environment
 import androidx.lifecycle.liveData
 import com.example.contadormtg.models.MeasurementDetails
 import com.example.contadormtg.networking.RetrofitBuilder
 import com.example.glicemapapp.data.models.SendMeasureRequest
+import java.io.File
+import java.io.InputStream
 
 sealed class Result<out R> {
     data class Success<out T>(val data: T?) : Result<T?>()
@@ -56,6 +59,20 @@ object Repository {
     fun getUser(cpf: String) = liveData {
         try {
             val response = service.getUser(cpf)
+            if (response.isSuccessful) {
+                emit(Result.Success(data = response.body()))
+            } else {
+                emit(Result.Error(exception = Exception("Houve uma falha ao buscar as medidas, tente novamente mais tarde")))
+            }
+        } catch (e: Exception) {
+            emit(Result.Error(exception = e))
+        }
+    }
+
+
+    fun getPDF(cpf: String, minDate: String, maxDate: String) = liveData {
+        try {
+            val response = service.getPDF(cpf, minDate, maxDate)
             if (response.isSuccessful) {
                 emit(Result.Success(data = response.body()))
             } else {

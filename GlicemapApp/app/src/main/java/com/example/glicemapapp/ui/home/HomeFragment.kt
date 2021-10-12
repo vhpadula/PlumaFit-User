@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         setListeners()
         loadDates(0)
         val activity = requireActivity() as MainActivity
-        binding.welcomeText.text = context?.getString(R.string.welcome_text,activity.user.name)
+        binding.welcomeText.text = context?.getString(R.string.welcome_text,activity.user?.name)
         return root
     }
 

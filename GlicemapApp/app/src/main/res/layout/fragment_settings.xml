@@ -68,6 +68,7 @@
             android:textSize="@dimen/text_subheading"
             app:layout_constraintStart_toStartOf="@+id/personal_name_tv"
             app:layout_constraintTop_toBottomOf="@+id/personal_name_tv"
+            android:visibility="invisible"
             tools:text="Dados Pessoais" />
 
         <TextView
@@ -76,6 +77,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/text_subheading"
+            android:visibility="invisible"
+
             app:layout_constraintStart_toStartOf="@+id/personal_email_tv"
             app:layout_constraintTop_toBottomOf="@+id/personal_email_tv"
             tools:text="Dados Pessoais" />
@@ -87,6 +90,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/text_subheading"
+            android:visibility="invisible"
+
             app:layout_constraintStart_toStartOf="@+id/personal_max_tv"
             app:layout_constraintTop_toBottomOf="@+id/personal_max_tv"
             tools:text="Dados Pessoais" />

@@ -20,11 +20,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val repository = Repository
     private val cpf = "22949837859"
-    lateinit var user: User
+    var user: User? = null
+    var doctor: Doctor? = null
 
-//    var doctor = Doctor(null,null,null)
-
-    var doctor = Doctor ("1234567", "Gustavo Trivelatto", "gu.trivelatto@usp.br")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,21 +50,28 @@ class MainActivity : AppCompatActivity() {
                     is Result.Success -> {
                         result.data?.let {
                             user = User(
-                                it.documentNumber,
-                                it.name,
-                                it.email,
-                                it.password,
-                                it.birthdate,
-                                it.height,
-                                it.weight,
-                                it.sugarMin,
-                                it.sugarMax
+                                it.user.documentNumber,
+                                it.user.name,
+                                it.user.email,
+                                it.user.password,
+                                it.user.birthdate,
+                                it.user.height,
+                                it.user.weight,
+                                it.user.sugarMin,
+                                it.user.sugarMax
+                            )
+                            doctor = Doctor(
+                                it.medic.documentNumber,
+                                it.medic.name,
+                                it.medic.email
                             )
                             findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_home)
                             true
                         } ?: false
                     }
                     is Result.Error -> {
+                        user = null
+                        doctor = null
                         Snackbar.make(
                             binding.root,
                             "Erro de conexão",

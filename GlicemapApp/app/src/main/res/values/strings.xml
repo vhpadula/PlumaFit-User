@@ -55,6 +55,8 @@
     <string name="settings_sugar_min_level">Glicemia Alvo Máx: %s mg/dl</string>
     <string name="settings_sugar_max_level">Glicemia Alvo Min: %s mg/dl</string>
 
+    <string name="settings_doctor_crm">CRM: %s</string>
+
 
 
 

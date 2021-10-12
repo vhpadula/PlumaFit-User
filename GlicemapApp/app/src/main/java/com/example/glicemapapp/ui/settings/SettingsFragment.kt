@@ -34,23 +34,32 @@ class SettingsFragment : ToolbarFragment() {
         val root: View = binding.root
         val activity = requireActivity() as MainActivity
 
-        if (activity.doctor.documentNumber != null) {
-            binding.doctorNameTv.text = activity.doctor.name
+        if (activity.doctor!= null) {
+            binding.doctorNameTv.text = activity.doctor!!.name
             binding.doctorNameTv.visibility = View.VISIBLE
-            binding.doctorEmailTv.text = activity.doctor.email
+            binding.doctorEmailTv.text = activity.doctor!!.email
             binding.doctorEmailTv.visibility = View.VISIBLE
-            binding.doctorCrmTv.text = activity.doctor.documentNumber
+            binding.doctorCrmTv.text = context?.getString(R.string.settings_doctor_crm, activity.doctor!!.documentNumber)
             binding.doctorCrmTv.visibility = View.VISIBLE
         } else {
             binding.doctorNameTv.text = "Cadastre seu Médico"
         }
 
-        binding.personalNameTv.text = activity.user.name
-        binding.personalEmailTv.text = activity.user.email
-        binding.personalMinTv.text =
-            context?.getString(R.string.settings_sugar_min_level, activity.user.sugarMin)
-        binding.personalMaxTv.text =
-            context?.getString(R.string.settings_sugar_max_level, activity.user.sugarMax)
+        if(activity.user!=null){
+            binding.personalEmailTv.visibility=View.VISIBLE
+            binding.personalMinTv.visibility=View.VISIBLE
+            binding.personalMaxTv.visibility=View.VISIBLE
+            binding.personalNameTv.text = activity.user!!.name
+            binding.personalEmailTv.text = activity.user!!.email
+            binding.personalMinTv.text =
+                context?.getString(R.string.settings_sugar_min_level, activity.user!!.sugarMin)
+            binding.personalMaxTv.text =
+                context?.getString(R.string.settings_sugar_max_level, activity.user!!.sugarMax)
+        } else {
+            binding.personalNameTv.text = "Sem dados do usuário"
+        }
+
+
 
         setListeners()
         return root
@@ -69,7 +78,7 @@ class SettingsFragment : ToolbarFragment() {
             }
 
             doctor.setOnClickListener {
-                if (activity.doctor.documentNumber != null) {
+                if (activity.doctor != null) {
                     findNavController().navigate(SettingsFragmentDirections.toDeleteDoctor())
                 } else {
                     findNavController().navigate(SettingsFragmentDirections.toNewDoctor())

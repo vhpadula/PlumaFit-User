@@ -39,16 +39,16 @@ class SettingsPersonalFragment : ToolbarFragment() {
         val activity = requireActivity() as MainActivity
         val sdfApi = SimpleDateFormat("yyyy-MM-dd")
         val sdf = SimpleDateFormat("dd/MM/yyyy")
-        binding.nameEt.setText(activity.user.name)
-        val date =   sdfApi.parse(activity.user.birthdate)
+        binding.nameEt.setText(activity.user?.name)
+        val date =   sdfApi.parse(activity.user?.birthdate)
         binding.birthdayEt.setText(
             sdf.format(date)
         )
-        binding.heightEt.setText(activity.user.height)
-        binding.weightEt.setText(activity.user.weight)
-        binding.minEt.setText(activity.user.sugarMin)
-        binding.maxEt.setText(activity.user.sugarMax)
-        binding.emailEt.setText(activity.user.email)
+        binding.heightEt.setText(activity.user?.height)
+        binding.weightEt.setText(activity.user?.weight)
+        binding.minEt.setText(activity.user?.sugarMin)
+        binding.maxEt.setText(activity.user?.sugarMax)
+        binding.emailEt.setText(activity.user?.email)
         setListeners()
         return root
     }
