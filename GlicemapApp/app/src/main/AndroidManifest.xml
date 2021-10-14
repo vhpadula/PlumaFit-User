@@ -27,6 +27,8 @@
             android:resource="@xml/provider_paths"/> <!-- xml file created above -->
         </provider>
 
+        <receiver android:name=".AlarmReceiver"/>
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"

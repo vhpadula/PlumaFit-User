@@ -1,9 +1,14 @@
 package com.example.glicemapapp.ui.settings
 
+import android.app.Dialog
+import android.graphics.ColorFilter
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,6 +20,7 @@ import com.example.glicemapapp.databinding.FragmentSettingsDeleteDoctorBinding
 import com.example.glicemapapp.databinding.FragmentSettingsNewDoctorBinding
 import com.example.glicemapapp.databinding.FragmentSettingsPersonalBinding
 import com.example.glicemapapp.ui.MainActivity
+import com.example.glicemapapp.ui.home.NewMeasurementFragmentDirections
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
@@ -51,7 +57,29 @@ class SettingsDeleteDoctorFragment : ToolbarFragment() {
     private fun setListeners() {
         binding.run {
             deleteButton.setOnClickListener {
+                createDialog()
             }
         }
+    }
+
+    private fun createDialog(){
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.dialog_message_two_red)
+        dialog.findViewById<Button>(R.id.yes).setOnClickListener {
+            dialog.dismiss()
+        }
+
+
+        dialog.findViewById<Button>(R.id.no).setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.findViewById<TextView>(R.id.title).text = "Tem Certeza?"
+        dialog.findViewById<TextView>(R.id.description).text = "Ao excluir seu médico você terá que cadastrá-lo de novo se desejar retomar seu acompanhamento."
+        dialog.findViewById<ImageView>(R.id.icon).setImageDrawable(context?.getDrawable(R.drawable.ic_error_outline_black_24dp))
+        dialog.getWindow()?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.show()
+
+
+
     }
 }

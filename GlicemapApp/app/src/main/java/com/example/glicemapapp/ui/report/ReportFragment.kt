@@ -143,7 +143,6 @@ class ReportFragment : ToolbarFragment() {
         share.type = context?.contentResolver?.getType(uri)
         share.putExtra(Intent.EXTRA_STREAM, uri)
         share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        startActivity(share)
 
         val shareIntent = Intent.createChooser(share, null)
         startActivity(shareIntent)

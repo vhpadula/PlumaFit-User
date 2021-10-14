@@ -1,11 +1,11 @@
 package com.example.glicemapapp.ui.home
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
@@ -90,7 +90,7 @@ class NewMeasurementFragment : ToolbarFragment() {
                 when (result) {
                     is Result.Success -> {
                         result.data?.let {
-                            findNavController().navigate(NewMeasurementFragmentDirections.toHome())
+                            createDialog()
                             true
                         } ?: false
                     }
@@ -105,6 +105,23 @@ class NewMeasurementFragment : ToolbarFragment() {
                 }
             }
         }
+    }
+
+    private fun createDialog(){
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.dialog_message_one)
+        dialog.findViewById<Button>(R.id.yes).setOnClickListener {
+            findNavController().navigate(NewMeasurementFragmentDirections.toHome())
+            dialog.dismiss()
+        }
+        dialog.findViewById<TextView>(R.id.title).text = "Medição Registrada!"
+        dialog.findViewById<TextView>(R.id.description).text = "Sua nova medição foi registrada! Você já pode visualizá-la clicando na data de hoje na tela de início"
+        dialog.findViewById<ImageView>(R.id.icon).setImageDrawable(context?.getDrawable(R.drawable.ic_check_circle_black_24dp))
+        dialog.getWindow()?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.show()
+
+
+
     }
 
 

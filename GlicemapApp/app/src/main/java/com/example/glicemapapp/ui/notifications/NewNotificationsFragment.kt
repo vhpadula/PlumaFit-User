@@ -1,27 +1,23 @@
 package com.example.glicemapapp.ui.notifications
 
-import android.app.TimePickerDialog
+import android.app.*
+import android.content.Context
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.contadormtg.extracountersrv.ItemDragListener
-import com.example.contadormtg.extracountersrv.ItemTouchHelperCallback
+import com.example.glicemapapp.AlarmReceiver
 import com.example.glicemapapp.data.models.Notification
 import com.example.glicemapapp.databinding.FragmentNewNotificationsBinding
 import com.example.glicemapapp.ui.base.ToolbarFragment
-import com.example.glicemapapp.databinding.FragmentNotificationsBinding
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class NewNotificationsFragment : ToolbarFragment() {
 
@@ -31,6 +27,7 @@ class NewNotificationsFragment : ToolbarFragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
 
 
     override fun onCreateView(
@@ -120,6 +117,43 @@ class NewNotificationsFragment : ToolbarFragment() {
                 findNavController().navigate(NewNotificationsFragmentDirections.toNotification())
             }
         }
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name: CharSequence = "GlicemapChannel"
+            val description = "Channel for alarm"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel("Glicemap", name, importance)
+            channel.description = description
+
+            val notificationManager: NotificationManager =
+                context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    private fun setAlarmMonday(hour: Int, minute: Int){
+        val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val intent = Intent(context, AlarmReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(context,0,intent,0)
+        val currentDate = Calendar.getInstance()
+
+        while (currentDate[Calendar.DAY_OF_WEEK] !== Calendar.MONDAY) {
+            currentDate.add(Calendar.DATE, 1)
+        }
+        currentDate[Calendar.HOUR_OF_DAY] = hour
+        currentDate[Calendar.MINUTE] = minute
+        currentDate[Calendar.SECOND] = 0
+        currentDate[Calendar.MILLISECOND] = 0
+
+        intent.putExtra("extra info", "if needed")
+        alarmManager.setRepeating(
+            AlarmManager.RTC_WAKEUP,
+            currentDate.timeInMillis,
+            AlarmManager.INTERVAL_DAY * 7,
+            pendingIntent
+        )
     }
 
 }
