@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui
+package com.example.glicemapapp.ui.main
 
 import android.os.Bundle
 import android.view.View
@@ -8,7 +8,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Repository
 import com.example.glicemapapp.data.Result
-import com.example.glicemapapp.data.models.DatesResponse
 import com.example.glicemapapp.data.models.Doctor
 import com.example.glicemapapp.data.models.User
 import com.example.glicemapapp.databinding.ActivityMainBinding

@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.home
+package com.example.glicemapapp.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,18 +13,22 @@ import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.data.models.DatesResponse
 import com.example.glicemapapp.databinding.FragmentHomeBinding
-import com.example.glicemapapp.databinding.FragmentStartBinding
-import com.example.glicemapapp.ui.MainActivity
+import com.example.glicemapapp.databinding.FragmentLoginBinding
+import com.example.glicemapapp.ui.main.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
+import androidx.test.core.app.ApplicationProvider.getApplicationContext
+
+import android.content.Intent
+import androidx.test.core.app.ApplicationProvider
 
 
-class StartFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-
-    private var _binding: FragmentStartBinding? = null
+    private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+
 
 
     override fun onCreateView(
@@ -32,8 +36,11 @@ class StartFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentStartBinding.inflate(inflater, container, false)
+
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        setListeners()
+
         return root
     }
 
@@ -41,5 +48,16 @@ class StartFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-}
 
+
+    private fun setListeners(){
+        binding.loginButton.setOnClickListener {
+            val i = Intent(
+                getApplicationContext(),
+                MainActivity::class.java
+            )
+            startActivity(i)
+        }
+    }
+
+}

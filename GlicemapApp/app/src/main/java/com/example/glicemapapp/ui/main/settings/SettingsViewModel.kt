@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.settings
+package com.example.glicemapapp.ui.main.settings
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

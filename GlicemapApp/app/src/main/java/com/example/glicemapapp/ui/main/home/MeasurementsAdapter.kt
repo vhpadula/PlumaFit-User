@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.home
+package com.example.glicemapapp.ui.main.home
 
 import android.content.Context
 import android.view.LayoutInflater

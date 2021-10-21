@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.notifications
+package com.example.glicemapapp.ui.main.notifications
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,11 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contadormtg.extracountersrv.ItemDragListener
 import com.example.contadormtg.extracountersrv.ItemTouchHelperListener
-import com.example.contadormtg.models.MeasurementDetails
-import com.example.glicemapapp.R
-import com.example.glicemapapp.data.models.MeasurementDetailResponse
 import com.example.glicemapapp.data.models.Notification
-import com.example.glicemapapp.databinding.MeasurementItemBinding
 import com.example.glicemapapp.databinding.NotificationItemBinding
 import java.util.*
 

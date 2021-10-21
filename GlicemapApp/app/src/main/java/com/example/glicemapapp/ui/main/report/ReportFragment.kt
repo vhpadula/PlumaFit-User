@@ -1,8 +1,7 @@
-package com.example.glicemapapp.ui.report
+package com.example.glicemapapp.ui.main.report
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.graphics.pdf.PdfDocument
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -13,28 +12,22 @@ import android.view.ViewGroup
 import android.widget.DatePicker
 import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModelProvider
-import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
-import com.example.glicemapapp.data.models.DatesResponse
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentReportBinding
-import com.example.glicemapapp.ui.MainActivity
+import com.example.glicemapapp.ui.main.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import okio.Okio
 import okio.Source
 import java.io.File
-import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.max
 
 class ReportFragment : ToolbarFragment() {
     private lateinit var activity: MainActivity
 
     private lateinit var reportViewModel: ReportViewModel
     private var _binding: FragmentReportBinding? = null
-    private var minDate=""
-    private var maxDate=""
     private lateinit var pdfUri: Uri
 
     // This property is only valid between onCreateView and
@@ -51,6 +44,7 @@ class ReportFragment : ToolbarFragment() {
         _binding = FragmentReportBinding.inflate(inflater, container, false)
         val root: View = binding.root
         activity = requireActivity() as MainActivity
+        reportViewModel.user = activity.user!!
         setDatePickers()
         return root
     }
@@ -70,7 +64,7 @@ class ReportFragment : ToolbarFragment() {
               calendar.set(Calendar.MONTH,month)
               calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
               binding.startDateDp.text = sdf.format(calendar.time).toString()
-              minDate = sdfApi.format(calendar.time).toString()
+              reportViewModel.minDate = sdfApi.format(calendar.time).toString()
           }
       }
 
@@ -80,7 +74,7 @@ class ReportFragment : ToolbarFragment() {
                 calendar.set(Calendar.MONTH,month)
                 calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
                 binding.endDateDp.text = sdf.format(calendar.time).toString()
-                maxDate = sdfApi.format(calendar.time).toString()
+                reportViewModel.maxDate = sdfApi.format(calendar.time).toString()
 
             }
         }
@@ -103,7 +97,7 @@ class ReportFragment : ToolbarFragment() {
     private fun loadPDF(){
         binding.progressBar.visibility = View.VISIBLE
         binding.progressBar.bringToFront()
-        reportViewModel.getPDF(activity.user!!.documentNumber, minDate, maxDate).observe(viewLifecycleOwner){
+        reportViewModel.getPDF().observe(viewLifecycleOwner){
             binding.progressBar.visibility = View.INVISIBLE
             val result = it?.let { result ->
                 when (result) {

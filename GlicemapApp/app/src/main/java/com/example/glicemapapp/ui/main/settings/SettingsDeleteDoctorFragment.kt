@@ -1,8 +1,6 @@
-package com.example.glicemapapp.ui.settings
+package com.example.glicemapapp.ui.main.settings
 
 import android.app.Dialog
-import android.graphics.ColorFilter
-import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,20 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.ui.base.ToolbarFragment
-import com.example.glicemapapp.databinding.FragmentSettingsBinding
 import com.example.glicemapapp.databinding.FragmentSettingsDeleteDoctorBinding
-import com.example.glicemapapp.databinding.FragmentSettingsNewDoctorBinding
-import com.example.glicemapapp.databinding.FragmentSettingsPersonalBinding
-import com.example.glicemapapp.ui.MainActivity
-import com.example.glicemapapp.ui.home.NewMeasurementFragmentDirections
-import com.google.android.material.snackbar.Snackbar
-import java.text.SimpleDateFormat
-import java.time.format.DateTimeFormatter
 
 class SettingsDeleteDoctorFragment : ToolbarFragment() {
 

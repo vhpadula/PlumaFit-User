@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.home
+package com.example.glicemapapp.ui.main.home
 
 import android.app.Dialog
 import android.os.Bundle
@@ -111,7 +111,7 @@ class NewMeasurementFragment : ToolbarFragment() {
         val dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.dialog_message_one)
         dialog.findViewById<Button>(R.id.yes).setOnClickListener {
-            findNavController().navigate(NewMeasurementFragmentDirections.toHome())
+            findNavController().navigate(com.example.glicemapapp.ui.main.home.NewMeasurementFragmentDirections.toHome())
             dialog.dismiss()
         }
         dialog.findViewById<TextView>(R.id.title).text = "Medição Registrada!"

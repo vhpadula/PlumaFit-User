@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.notifications
+package com.example.glicemapapp.ui.main.notifications
 
 import android.app.*
 import android.content.Context
@@ -114,7 +114,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                     dates = "Só uma vez"
                 }
                 notificationsViewModel.items.add(Notification(binding.nameEt.text.toString(), binding.timeEt.text.toString(),dates))
-                findNavController().navigate(NewNotificationsFragmentDirections.toNotification())
+                findNavController().navigate(com.example.glicemapapp.ui.main.notifications.NewNotificationsFragmentDirections.toNotification())
             }
         }
     }

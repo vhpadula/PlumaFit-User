@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.home
+package com.example.glicemapapp.ui.main.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
-import com.example.glicemapapp.data.models.MeasurementDetailResponse
 import com.example.glicemapapp.databinding.FragmentDayBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -23,7 +22,7 @@ class DayFragment : Fragment() {
     private var _binding: FragmentDayBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: MeasurementsAdapter
-    private val args by navArgs<com.example.glicemapapp.ui.home.DayFragmentArgs>()
+    private val args by navArgs<com.example.glicemapapp.ui.main.home.DayFragmentArgs>()
 
 
     override fun onCreateView(
@@ -91,7 +90,7 @@ class DayFragment : Fragment() {
             val insulin = adapter.items[position].insulin
             val observations = adapter.items[position].observations
             val situation = adapter.items[position].situation
-            findNavController().navigate(DayFragmentDirections.toMeasurement(args.dateDay, args.dateMonth,args.dateYear,args.weekDay,situation,sugarLevel,insulin,observations))
+            findNavController().navigate(com.example.glicemapapp.ui.main.home.DayFragmentDirections.toMeasurement(args.dateDay, args.dateMonth,args.dateYear,args.weekDay,situation,sugarLevel,insulin,observations))
         }
         binding.run {
             measurementsDayRv.adapter = adapter

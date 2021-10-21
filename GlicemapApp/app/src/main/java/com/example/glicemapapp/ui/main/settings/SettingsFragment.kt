@@ -1,17 +1,15 @@
-package com.example.glicemapapp.ui.settings
+package com.example.glicemapapp.ui.main.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentSettingsBinding
-import com.example.glicemapapp.ui.MainActivity
+import com.example.glicemapapp.ui.main.MainActivity
 
 class SettingsFragment : ToolbarFragment() {
 
@@ -74,14 +72,14 @@ class SettingsFragment : ToolbarFragment() {
         val activity = requireActivity() as MainActivity
         binding.run {
             personal.setOnClickListener {
-                findNavController().navigate(SettingsFragmentDirections.toPersonal())
+                findNavController().navigate(com.example.glicemapapp.ui.main.settings.SettingsFragmentDirections.toPersonal())
             }
 
             doctor.setOnClickListener {
                 if (activity.doctor != null) {
-                    findNavController().navigate(SettingsFragmentDirections.toDeleteDoctor())
+                    findNavController().navigate(com.example.glicemapapp.ui.main.settings.SettingsFragmentDirections.toDeleteDoctor())
                 } else {
-                    findNavController().navigate(SettingsFragmentDirections.toNewDoctor())
+                    findNavController().navigate(com.example.glicemapapp.ui.main.settings.SettingsFragmentDirections.toNewDoctor())
                 }
 
             }

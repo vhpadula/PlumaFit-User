@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/vhpad/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/drawable/rectangle_text_box.xml" value="0.20729166666666668" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/activity_login.xml" value="0.16822916666666668" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/blue_toolbar.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/calendar_day.xml" value="0.19114583333333332" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_day.xml" value="0.33" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_day_bottom_sheet.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_login.xml" value="0.16822916666666668" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_measurement.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_new_measurement.xml" value="0.25" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_new_notifications.xml" value="0.22" />

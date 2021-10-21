@@ -1,20 +1,16 @@
-package com.example.glicemapapp.ui.notifications
+package com.example.glicemapapp.ui.main.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contadormtg.extracountersrv.ItemDragListener
 import com.example.contadormtg.extracountersrv.ItemTouchHelperCallback
-import com.example.glicemapapp.data.models.Notification
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentNotificationsBinding
 
@@ -43,7 +39,7 @@ class NotificationsFragment : ToolbarFragment(), ItemDragListener {
         setAdapter()
         setupItemTouchHelper()
         binding.newMeasurementBt.setOnClickListener {
-            findNavController().navigate(NotificationsFragmentDirections.toNewNotification())
+            findNavController().navigate(com.example.glicemapapp.ui.main.notifications.NotificationsFragmentDirections.toNewNotification())
         }
         return root
     }

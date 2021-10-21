@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.home
+package com.example.glicemapapp.ui.main.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +13,7 @@ import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.data.models.DatesResponse
 import com.example.glicemapapp.databinding.FragmentHomeBinding
-import com.example.glicemapapp.ui.MainActivity
+import com.example.glicemapapp.ui.main.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
@@ -102,7 +102,7 @@ class HomeFragment : Fragment() {
 
     private fun setListeners(){
         binding.newMeasurementBt.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.toNewMeasurement())
+            findNavController().navigate(com.example.glicemapapp.ui.main.home.HomeFragmentDirections.toNewMeasurement())
         }
     }
 

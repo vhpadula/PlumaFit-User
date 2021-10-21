@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/report"
-    tools:context=".ui.report.ReportFragment">
+    tools:context=".ui.main.report.ReportFragment">
 
     <include layout="@layout/collapsing_toolbar_white"/>
 

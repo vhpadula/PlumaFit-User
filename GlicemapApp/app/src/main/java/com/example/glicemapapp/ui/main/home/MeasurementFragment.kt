@@ -1,4 +1,4 @@
-package com.example.glicemapapp.ui.home
+package com.example.glicemapapp.ui.main.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import com.example.glicemapapp.R
 import com.example.glicemapapp.databinding.FragmentMeasurementBinding
-import com.example.glicemapapp.ui.base.ToolbarFragment
 
 
 class MeasurementFragment : Fragment() {
@@ -18,7 +17,7 @@ class MeasurementFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentMeasurementBinding? = null
     private val binding get() = _binding!!
-    private val args by navArgs<com.example.glicemapapp.ui.home.MeasurementFragmentArgs>()
+    private val args by navArgs<com.example.glicemapapp.ui.main.home.MeasurementFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
