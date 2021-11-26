@@ -1,6 +1,7 @@
 package com.example.glicemapapp.ui.main.settings
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +12,15 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
+import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.models.RegisterDoctorRequest
+import com.example.glicemapapp.data.models.SignUpRequest
+import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentSettingsNewDoctorBinding
+import com.example.glicemapapp.ui.main.MainActivity
 import com.example.glicemapapp.ui.main.home.NewMeasurementFragmentDirections
+import com.google.android.material.snackbar.Snackbar
 
 class SettingsNewDoctorFragment : ToolbarFragment() {
 
@@ -30,7 +37,7 @@ class SettingsNewDoctorFragment : ToolbarFragment() {
         savedInstanceState: Bundle?
     ): View? {
         settingsViewModel =
-            ViewModelProvider(this).get(SettingsViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(SettingsViewModel::class.java)
 
         _binding = FragmentSettingsNewDoctorBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -47,7 +54,44 @@ class SettingsNewDoctorFragment : ToolbarFragment() {
     private fun setListeners() {
         binding.run {
             saveButton.setOnClickListener {
-                createDialog()
+                registerDoctor(RegisterDoctorRequest(settingsViewModel.user.documentNumber, codeEt.text.toString()))
+            }
+        }
+    }
+
+
+
+    private fun registerDoctor(request: RegisterDoctorRequest){
+        binding.progressBar.visibility = View.VISIBLE
+        binding.progressBar.bringToFront()
+        settingsViewModel.registerDoctor(request).observe(viewLifecycleOwner){
+            binding.progressBar.visibility = View.INVISIBLE
+            val result = it?.let { result ->
+                when (result) {
+                    is Result.Success -> {
+                        result.data?.let {
+                            if (it){
+                                createDialog()
+                            } else {
+                                Snackbar.make(
+                                    binding.root,
+                                    "Houve um erro no cadastro, tente novamente mais tarde",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
+                            }
+
+                            true
+                        } ?: false
+                    }
+                    is Result.Error -> {
+                        Snackbar.make(
+                            binding.root,
+                            handleException(result.exception.message.toString()),
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                        false
+                    }
+                }
             }
         }
     }
@@ -57,8 +101,13 @@ class SettingsNewDoctorFragment : ToolbarFragment() {
         val dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.dialog_message_one)
         dialog.findViewById<Button>(R.id.yes).setOnClickListener {
-            findNavController().navigate(NewMeasurementFragmentDirections.toHome())
             dialog.dismiss()
+            val i = Intent(
+                this.context,
+                MainActivity::class.java
+            )
+            i.putExtra("document", settingsViewModel.user.documentNumber)
+            startActivity(i)
         }
         dialog.findViewById<TextView>(R.id.title).text = "Médico Cadastrado!"
         dialog.findViewById<TextView>(R.id.description).text = "Seu médico agora pode acompanhar suas medições de glicemia em tempo real!"

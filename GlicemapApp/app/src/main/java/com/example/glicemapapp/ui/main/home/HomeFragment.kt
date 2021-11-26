@@ -12,6 +12,7 @@ import com.applandeo.materialcalendarview.EventDay
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.data.models.DatesResponse
+import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.databinding.FragmentHomeBinding
 import com.example.glicemapapp.ui.main.MainActivity
 import com.google.android.material.snackbar.Snackbar
@@ -27,18 +28,21 @@ class HomeFragment : Fragment() {
 
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
+        val activity = requireActivity() as MainActivity
+        homeViewModel.user = activity.user!!
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         setListeners()
         loadDates(0)
-        val activity = requireActivity() as MainActivity
+
         binding.welcomeText.text = context?.getString(R.string.welcome_text,activity.user?.name)
         return root
     }
@@ -64,7 +68,7 @@ class HomeFragment : Fragment() {
                     is Result.Error -> {
                         Snackbar.make(
                             binding.root,
-                            "Erro de conexão",
+                            handleException(result.exception.message.toString()),
                             Snackbar.LENGTH_LONG
                         ).show()
                         setCalendar(homeViewModel.setCalendarData(DatesResponse(listOf("01-01-2000"))))

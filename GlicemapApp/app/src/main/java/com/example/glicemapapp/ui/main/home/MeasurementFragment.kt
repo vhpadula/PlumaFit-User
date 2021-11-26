@@ -25,7 +25,7 @@ class MeasurementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
 
         _binding = FragmentMeasurementBinding.inflate(inflater, container, false)
         val root: View = binding.root

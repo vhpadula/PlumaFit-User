@@ -1,4 +1,4 @@
-package com.example.contadormtg.networking
+package com.example.glicemapapp.data.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

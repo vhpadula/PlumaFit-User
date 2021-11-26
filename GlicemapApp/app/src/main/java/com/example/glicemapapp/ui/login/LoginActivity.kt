@@ -32,15 +32,6 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.innerToolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment_activity_login)
-        toolbar.setNavigationOnClickListener{
-            navController.navigateUp()
-        }
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            toolbar.title = destination.label.toString()
-        }
 
     }
 

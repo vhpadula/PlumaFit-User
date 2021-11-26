@@ -22,14 +22,24 @@ class HomeViewModel : ViewModel() {
     lateinit var user: User
 
     fun loadDates(addMonth: Int): LiveData<Result<DatesResponse?>> {
-        val month = currentDate.monthValue + addMonth
-        currentDate = LocalDate.of(2021, month, 1)
+        var year = currentDate.year
+        var month = currentDate.monthValue
+        if (currentDate.monthValue == 12) {
+            year += 1
+            month = 1
+        } else if (currentDate.monthValue == 1) {
+            year -= 1
+            month = 12
+        } else {
+            month += addMonth
+        }
+        currentDate = LocalDate.of(year, month, 1)
         val date = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
-        return repository.getMeasurementDates("22949837859", date)
+        return repository.getMeasurementDates(user.documentNumber, date)
     }
 
     fun loadDayMeasurementDetails(date: String): LiveData<Result<MeasurementDetailResponse?>> =
-        repository.getMeasurementDetails("22949837859", date)
+        repository.getMeasurementDetails(user.documentNumber, date)
 
 
     fun setCalendarData(_dates: DatesResponse): MutableList<EventDay> {
@@ -53,7 +63,7 @@ class HomeViewModel : ViewModel() {
         val _date = LocalDate.now()
         val date = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
         return repository.sendMeasurement(
-            "22949837859",
+            user.documentNumber,
             date,
             MeasurementDetails(sugarLevel, insulin, situation, observations)
         )

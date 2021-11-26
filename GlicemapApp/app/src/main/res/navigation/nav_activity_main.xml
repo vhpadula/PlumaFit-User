@@ -7,7 +7,12 @@
 
     <fragment
         android:id="@+id/navigation_start"
-        android:name="com.example.glicemapapp.ui.main.home.StartFragment" />
+        android:name="com.example.glicemapapp.ui.main.home.StartFragment" >
+        <action
+            android:id="@+id/to_navigation_home"
+            app:destination="@id/navigation_home"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_home"

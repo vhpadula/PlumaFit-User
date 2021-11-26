@@ -7,7 +7,45 @@
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.example.glicemapapp.ui.login.LoginFragment" />
+        android:name="com.example.glicemapapp.ui.login.LoginFragment" >
+
+
+        <action
+            android:id="@+id/to_signup"
+            app:destination="@id/navigation_signup"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.example.glicemapapp.ui.login.SignUpFragment"
+        android:label="Conte-nos sobre você">
+
+
+        <action
+            android:id="@+id/to_signupcontinue"
+            app:destination="@id/navigation_signupcontinue"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_signupcontinue"
+        android:name="com.example.glicemapapp.ui.login.SignUpContinueFragment"
+        android:label="Mais um pouquinho">
+
+
+
+
+    </fragment>
 
 
 

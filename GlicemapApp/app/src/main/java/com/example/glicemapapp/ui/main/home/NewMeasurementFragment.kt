@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.databinding.FragmentNewMeasurementBinding
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.google.android.material.snackbar.Snackbar
@@ -32,7 +33,7 @@ class NewMeasurementFragment : ToolbarFragment() {
         savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
 
         _binding = FragmentNewMeasurementBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -97,7 +98,7 @@ class NewMeasurementFragment : ToolbarFragment() {
                     is Result.Error -> {
                         Snackbar.make(
                             binding.root,
-                            "Erro de conexão",
+                            handleException(result.exception.message.toString()),
                             Snackbar.LENGTH_LONG
                         ).show()
                         false

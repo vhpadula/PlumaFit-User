@@ -1,30 +1,42 @@
-package com.example.contadormtg.networking
+package com.example.glicemapapp.data.network
 
 import android.graphics.pdf.PdfDocument
 import com.example.contadormtg.models.MeasurementDetails
-import com.example.glicemapapp.data.models.DatesResponse
-import com.example.glicemapapp.data.models.GetUserResponse
-import com.example.glicemapapp.data.models.MeasurementDetailResponse
-import com.example.glicemapapp.data.models.SendMeasureRequest
+import com.example.glicemapapp.data.models.*
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.*
 
 interface RemoteApiService {
-    @GET("searchMeasures/month")
+    @GET("measures/month")
     suspend fun getMeasurementDates(@Header("documentNumber")documentNumber: String, @Header("date")date: String) : Response<DatesResponse?>
 
-    @GET("searchMeasures/day")
+    @GET("measures/day")
     suspend fun getMeasurementDetails(@Header("documentNumber")documentNumber: String, @Header("date")date: String) : Response<MeasurementDetailResponse?>
 
-    @GET("getInfo")
+    @GET("info")
     suspend fun getUser(@Header("documentNumber")documentNumber: String): Response<GetUserResponse?>
 
     @Streaming
-    @GET("exportReport")
+    @GET("report")
     suspend fun getPDF(@Header("documentNumber")documentNumber: String, @Header("dateBegin")dateBegin: String, @Header("dateEnd")dateEmd: String ): Response<ResponseBody?>
 
-    @POST("postMeasure")
+    @POST("measures")
     suspend fun sendMeasurement (@Body request: SendMeasureRequest): Response<Boolean?>
+
+    @POST("login")
+    suspend fun loginUser(@Body request: LoginRequest): Response<String?>
+
+    @POST("sign-up")
+    suspend fun registerUser(@Body request: SignUpRequest): Response<Boolean?>
+
+    @PUT("info")
+    suspend fun alterData(@Body request: SignUpRequest): Response<Boolean?>
+
+    @POST("medic")
+    suspend fun registerDoctor(@Body request: RegisterDoctorRequest): Response<Boolean?>
+
+    @DELETE("medic")
+    suspend fun deleteDoctor(@Body request: DeleteDoctorRequest): Response<Boolean?>
 
 }

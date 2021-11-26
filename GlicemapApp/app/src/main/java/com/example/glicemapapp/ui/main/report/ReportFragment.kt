@@ -13,6 +13,7 @@ import android.widget.DatePicker
 import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModelProvider
 import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentReportBinding
 import com.example.glicemapapp.ui.main.MainActivity
@@ -41,6 +42,7 @@ class ReportFragment : ToolbarFragment() {
     ): View? {
         reportViewModel =
             ViewModelProvider(this).get(ReportViewModel::class.java)
+
         _binding = FragmentReportBinding.inflate(inflater, container, false)
         val root: View = binding.root
         activity = requireActivity() as MainActivity
@@ -57,7 +59,7 @@ class ReportFragment : ToolbarFragment() {
     private fun setDatePickers(){
         val calendar = Calendar.getInstance()
         val sdf = SimpleDateFormat("dd/MM/yyyy")
-        val sdfApi = SimpleDateFormat("dd/MM/yyyy")
+        val sdfApi = SimpleDateFormat("dd-MM-yyyy")
       val dateSetListenerStart = object: DatePickerDialog.OnDateSetListener{
           override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int){
               calendar.set(Calendar.YEAR,year)
@@ -119,7 +121,7 @@ class ReportFragment : ToolbarFragment() {
                         result.exception.message?.let { it1 ->
                             Snackbar.make(
                                 binding.root,
-                                it1,
+                                handleException(result.exception.message.toString()),
                                 Snackbar.LENGTH_LONG
                             ).show()
                         }

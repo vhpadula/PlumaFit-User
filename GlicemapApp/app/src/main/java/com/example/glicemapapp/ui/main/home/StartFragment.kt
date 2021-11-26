@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.databinding.FragmentStartBinding
 import java.util.*
 
@@ -23,6 +24,8 @@ class StartFragment : Fragment() {
     ): View? {
         _binding = FragmentStartBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+
         return root
     }
 

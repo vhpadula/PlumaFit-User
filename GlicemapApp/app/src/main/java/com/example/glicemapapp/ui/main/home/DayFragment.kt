@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.glicemapapp.R
 import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.databinding.FragmentDayBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -31,7 +32,7 @@ class DayFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
 
         _binding = FragmentDayBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -67,13 +68,16 @@ class DayFragment : Fragment() {
                     is Result.Success -> {
                         result.data?.let {
                             adapter.loadData(it)
+                            if (it.measures.isEmpty()){
+                                binding.noMeasures.visibility= View.VISIBLE
+                            }
                             true
                         } ?: false
                     }
                     is Result.Error -> {
                         Snackbar.make(
                             binding.root,
-                            result.exception.message.toString(),
+                            handleException(result.exception.message.toString()),
                             Snackbar.LENGTH_LONG
                         ).show()
                         binding.noMeasures.visibility= View.VISIBLE

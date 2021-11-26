@@ -1,6 +1,7 @@
 package com.example.glicemapapp.ui.main.settings
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +11,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.glicemapapp.R
+import com.example.glicemapapp.data.Result
+import com.example.glicemapapp.data.models.RegisterDoctorRequest
+import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentSettingsDeleteDoctorBinding
+import com.example.glicemapapp.ui.main.MainActivity
+import com.google.android.material.snackbar.Snackbar
 
 class SettingsDeleteDoctorFragment : ToolbarFragment() {
 
@@ -54,7 +60,7 @@ class SettingsDeleteDoctorFragment : ToolbarFragment() {
         val dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.dialog_message_two_red)
         dialog.findViewById<Button>(R.id.yes).setOnClickListener {
-            dialog.dismiss()
+            deleteDoctor()
         }
 
 
@@ -69,5 +75,45 @@ class SettingsDeleteDoctorFragment : ToolbarFragment() {
 
 
 
+    }
+
+    private fun deleteDoctor(){
+        binding.progressBar.visibility = View.VISIBLE
+        binding.progressBar.bringToFront()
+        settingsViewModel.deleteDoctor().observe(viewLifecycleOwner){
+            binding.progressBar.visibility = View.INVISIBLE
+            val result = it?.let { result ->
+                when (result) {
+                    is Result.Success -> {
+                        result.data?.let {
+                            if (it){
+                                val i = Intent(
+                                    this.context,
+                                    MainActivity::class.java
+                                )
+                                i.putExtra("document", settingsViewModel.user.documentNumber)
+                                startActivity(i)
+                            } else {
+                                Snackbar.make(
+                                    binding.root,
+                                    "Houve um erro no cadastro, tente novamente mais tarde",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
+                            }
+
+                            true
+                        } ?: false
+                    }
+                    is Result.Error -> {
+                        Snackbar.make(
+                            binding.root,
+                            handleException(result.exception.message.toString()),
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                        false
+                    }
+                }
+            }
+        }
     }
 }

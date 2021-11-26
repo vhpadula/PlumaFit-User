@@ -1,4 +1,4 @@
-package com.example.contadormtg.networking
+package com.example.glicemapapp.data.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

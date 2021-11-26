@@ -26,11 +26,12 @@ class SettingsFragment : ToolbarFragment() {
         savedInstanceState: Bundle?
     ): View? {
         settingsViewModel =
-            ViewModelProvider(this).get(SettingsViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(SettingsViewModel::class.java)
 
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val activity = requireActivity() as MainActivity
+        settingsViewModel.user = activity.user!!
 
         if (activity.doctor!= null) {
             binding.doctorNameTv.text = activity.doctor!!.name
@@ -47,7 +48,7 @@ class SettingsFragment : ToolbarFragment() {
             binding.personalEmailTv.visibility=View.VISIBLE
             binding.personalMinTv.visibility=View.VISIBLE
             binding.personalMaxTv.visibility=View.VISIBLE
-            binding.personalNameTv.text = activity.user!!.name
+            binding.personalNameTv.text = activity.user!!.name + " " + activity.user!!.lastName
             binding.personalEmailTv.text = activity.user!!.email
             binding.personalMinTv.text =
                 context?.getString(R.string.settings_sugar_min_level, activity.user!!.sugarMin)

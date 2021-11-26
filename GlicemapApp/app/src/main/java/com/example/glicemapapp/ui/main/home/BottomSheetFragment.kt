@@ -29,8 +29,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
+            ViewModelProvider(requireActivity()).get(HomeViewModel::class.java)
         _binding = FragmentBottomSheetBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val fragmentContainer = binding.root.findViewById<View>(nav_host_fragment_bottom_sheet)

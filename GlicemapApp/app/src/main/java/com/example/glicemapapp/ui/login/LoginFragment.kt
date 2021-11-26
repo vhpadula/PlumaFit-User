@@ -22,10 +22,12 @@ import androidx.test.core.app.ApplicationProvider.getApplicationContext
 
 import android.content.Intent
 import androidx.test.core.app.ApplicationProvider
+import com.example.glicemapapp.data.network.handleException
+import com.example.glicemapapp.ui.main.home.HomeViewModel
 
 
 class LoginFragment : Fragment() {
-
+    private lateinit var loginViewModel: LoginViewModel
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
@@ -36,7 +38,8 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        loginViewModel =
+            ViewModelProvider(requireActivity()).get(LoginViewModel::class.java)
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
         setListeners()
@@ -52,11 +55,51 @@ class LoginFragment : Fragment() {
 
     private fun setListeners(){
         binding.loginButton.setOnClickListener {
-            val i = Intent(
-                getApplicationContext(),
-                MainActivity::class.java
-            )
-            startActivity(i)
+            loginUser(binding.emailEt.text.toString(),binding.passwordEt.text.toString())
+        }
+        binding.signupButton.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.toSignup())
+        }
+    }
+
+    private fun loginUser(login: String, password: String){
+        binding.progressBar.visibility = View.VISIBLE
+        binding.progressBar.bringToFront()
+        loginViewModel.loginUser(login,password).observe(viewLifecycleOwner){
+            binding.progressBar.visibility = View.INVISIBLE
+            val result = it?.let { result ->
+                when (result) {
+                    is Result.Success -> {
+                        result.data?.let {
+                            if (it== "0"){
+
+                                Snackbar.make(
+                                    binding.root,
+                                    "Email ou Senha Incorreto",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
+                            } else {
+                                val i = Intent(
+                                    this.context,
+                                    MainActivity::class.java
+                                )
+                                i.putExtra("document", binding.emailEt.text.toString())
+                                startActivity(i)
+                            }
+
+                            true
+                        } ?: false
+                    }
+                    is Result.Error -> {
+                        Snackbar.make(
+                            binding.root,
+                            handleException(result.exception.message.toString()),
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                        false
+                    }
+                }
+            }
         }
     }
 

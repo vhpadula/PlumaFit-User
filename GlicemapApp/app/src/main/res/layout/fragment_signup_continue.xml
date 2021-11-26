@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/notifications"
+    tools:context=".ui.login.LoginFragment"
+    android:background="@color/RoyalBlue">
+    <include layout="@layout/collapsing_toolbar_blue"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        tools:visibility ="visible"/>
+
+
+
+    <TextView
+        android:id="@+id/document_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+  android:layout_marginTop="@dimen/margin_medium"
+        android:text="CPF"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        app:layout_constraintStart_toStartOf="@id/document"
+        app:layout_constraintTop_toBottomOf="@id/appBarBlue" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/document"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/document_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_large"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/document_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+           android:inputType="number"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/birthdate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Data de Nascimento"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        app:layout_constraintStart_toStartOf="@id/birthdate"
+        app:layout_constraintTop_toBottomOf="@id/document" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/birthdate"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/birthdate_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_large"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/birthdate_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="date"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:id="@+id/height_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Altura"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        app:layout_constraintStart_toStartOf="@id/document"
+        app:layout_constraintTop_toBottomOf="@id/birthdate" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/height"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/height_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_large"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/height_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+          android:inputType="number"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/weight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Peso"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        app:layout_constraintStart_toStartOf="@id/birthdate"
+        app:layout_constraintTop_toBottomOf="@id/height" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weight"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/weight_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_large"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/weight_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/sugarmax_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Glicemia Alvo Máxima"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+       app:layout_constraintStart_toStartOf="@id/sugarmax"
+        app:layout_constraintEnd_toEndOf="@id/sugarmax"
+        android:layout_marginHorizontal="@dimen/margin_medium_large"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sugarmax"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sugarmax_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintStart_toEndOf="@id/sugarmin"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sugarmax_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/sugarmin_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Glicemia Alvo Mínima"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_subtitle"
+        android:layout_marginHorizontal="@dimen/margin_medium_large"
+        app:layout_constraintStart_toStartOf="@id/sugarmin"
+        app:layout_constraintEnd_toEndOf="@id/sugarmin"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sugarmin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sugarmin_tv"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/sugarmax"
+       android:layout_marginHorizontal="24dp"
+        app:boxBackgroundColor="@color/RoyalBlue"
+        app:placeholderTextColor="@color/white"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sugarmin_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/NavyBlue"
+        android:text="Confirmar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sugarmin"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

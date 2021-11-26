@@ -7,6 +7,8 @@ data class User (
     val documentNumber: String,
     @SerializedName("name")
     val name: String,
+    @SerializedName("lastName")
+    val lastName: String,
     @SerializedName("email")
     val email: String,
     @SerializedName("password")
