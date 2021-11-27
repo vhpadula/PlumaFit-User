@@ -59,7 +59,7 @@ class ReportFragment : ToolbarFragment() {
     private fun setDatePickers(){
         val calendar = Calendar.getInstance()
         val sdf = SimpleDateFormat("dd/MM/yyyy")
-        val sdfApi = SimpleDateFormat("dd-MM-yyyy")
+        val sdfApi = SimpleDateFormat("yyyy-MM-dd")
       val dateSetListenerStart = object: DatePickerDialog.OnDateSetListener{
           override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int){
               calendar.set(Calendar.YEAR,year)

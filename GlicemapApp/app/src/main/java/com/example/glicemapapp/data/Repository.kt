@@ -126,7 +126,7 @@ object Repository {
 
     fun registerDoctor(request: RegisterDoctorRequest) = liveData {
         try {
-            val response = service.registerDoctor(request)
+            val response = service.registerDoctor(request.code, request.documentNumber)
             if (response.isSuccessful) {
                 emit(Result.Success(data = response.body()))
             } else {
@@ -139,7 +139,7 @@ object Repository {
 
     fun deleteDoctor(request: DeleteDoctorRequest) = liveData {
         try {
-            val response = service.deleteDoctor(request)
+            val response = service.deleteDoctor(request.documentNumber)
             if (response.isSuccessful) {
                 emit(Result.Success(data = response.body()))
             } else {

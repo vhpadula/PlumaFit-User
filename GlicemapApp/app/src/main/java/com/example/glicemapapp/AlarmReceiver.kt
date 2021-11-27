@@ -1,5 +1,6 @@
 package com.example.glicemapapp
 
+import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -8,6 +9,7 @@ import android.content.SharedPreferences
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.glicemapapp.ui.main.MainActivity
+import java.util.*
 
 class AlarmReceiver : BroadcastReceiver() {
 
@@ -29,11 +31,20 @@ class AlarmReceiver : BroadcastReceiver() {
             val preferences =
                 context.getSharedPreferences("notifications", Context.MODE_PRIVATE)
             val recurring = intent!!.extras!!.getBoolean("recurring")
+            val id = intent?.extras?.getString("id")
             if (!recurring){
-                val id = intent?.extras?.getString("id")
                 if(preferences.getString(id, null) != null){
                     preferences.edit().remove(id).apply()
                 }
+            } else {
+                val currentDate = Calendar.getInstance()
+                currentDate[Calendar.DAY_OF_MONTH] = currentDate.get(Calendar.DAY_OF_MONTH) + 7
+                val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                val intent = Intent(context, AlarmReceiver::class.java)
+                intent.putExtra("id", id)
+                intent.putExtra("recurring", true)
+                val pendingIntent = PendingIntent.getBroadcast(context, id!!.toInt(), intent, 0)
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
 

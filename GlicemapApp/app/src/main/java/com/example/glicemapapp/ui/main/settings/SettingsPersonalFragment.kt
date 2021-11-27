@@ -16,6 +16,7 @@ import com.example.glicemapapp.data.Result
 import com.example.glicemapapp.data.models.SignUpRequest
 import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.databinding.FragmentSettingsPersonalBinding
+import com.example.glicemapapp.ui.base.DateInputMask
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.ui.main.MainActivity
 import com.google.android.material.snackbar.Snackbar
@@ -66,6 +67,7 @@ class SettingsPersonalFragment : ToolbarFragment() {
     }
 
     private fun setListeners() {
+        val mask = DateInputMask(binding.birthdayEt).listen()
         binding.run {
             saveButton.setOnClickListener {
                 if(!binding.passwordEt.text.isNullOrEmpty()){

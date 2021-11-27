@@ -1,5 +1,6 @@
 package com.example.glicemapapp.ui.main
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
@@ -69,23 +71,48 @@ class MainActivity : AppCompatActivity() {
                                 it.user.sugarMin,
                                 it.user.sugarMax
                             )
+                            val preferences =
+                                getSharedPreferences("userData", Context.MODE_PRIVATE)
+                            val editor = preferences.edit()
+                            val gson = Gson()
+                            val json = gson.toJson(User(
+                                it.user.documentNumber,
+                                it.user.name,
+                                it.user.lastName,
+                                it.user.email,
+                                it.user.password,
+                                it.user.birthdate,
+                                it.user.height,
+                                it.user.weight,
+                                it.user.sugarMin,
+                                it.user.sugarMax
+                            ))
+                            editor.putString("user", json);
+                            editor.apply()
                             doctor = Doctor(
                                 it.medic.documentNumber,
                                 it.medic.name,
                                 it.medic.email
                             )
-                            Snackbar.make(
-                                binding.root,
-                                "handleException(result.exception.message.toString())",
-                                Snackbar.LENGTH_LONG
-                            ).show()
+
+                            val json2 = gson.toJson(Doctor(
+                                it.medic.documentNumber,
+                                it.medic.name,
+                                it.medic.email
+                            ))
+                            editor.putString("doctor", json2);
+                            editor.apply()
                             true
                         } ?: false
 
                     }
                     is Result.Error -> {
-                        user = null
-                        doctor = null
+                        val preferences = getSharedPreferences("userData", Context.MODE_PRIVATE)
+                        val gson = Gson()
+                        val json = preferences.getString("user", "")
+                        user = gson.fromJson(json, User::class.java)
+                        val json2 = preferences.getString("doctor", "")
+                        doctor = gson.fromJson(json2, Doctor::class.java)
                         Snackbar.make(
                             binding.root,
                             handleException(result.exception.message.toString()),

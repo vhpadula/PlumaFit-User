@@ -71,8 +71,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/birthday_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"/>
+            android:inputType="date"
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toStartOf="@id/weight"
         android:layout_marginHorizontal="@dimen/margin_medium_large"
         app:boxBackgroundColor="@color/Transparent"
-        android:hint="Altura"
+        android:hint="Altura (cm)"
         app:hintTextColor="@color/NavyBlue">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -105,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:boxBackgroundColor="@color/Transparent"
         android:layout_marginHorizontal="@dimen/margin_medium_large"
-        android:hint="Peso"
+        android:hint="Peso (kg)"
         app:hintTextColor="@color/NavyBlue">
 
         <com.google.android.material.textfield.TextInputEditText

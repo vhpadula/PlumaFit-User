@@ -60,7 +60,7 @@ class HomeViewModel : ViewModel() {
         situation: String,
         observations: String?
     ): LiveData<Result<Boolean?>> {
-        val _date = LocalDate.now()
+        currentDate = LocalDate.now()
         val date = currentDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
         return repository.sendMeasurement(
             user.documentNumber,

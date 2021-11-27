@@ -195,12 +195,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
             if (binding.seg.isChecked) {
@@ -213,12 +208,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
             if (binding.ter.isChecked) {
@@ -231,12 +221,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
             if (binding.qua.isChecked) {
@@ -249,12 +234,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
             if (binding.qui.isChecked) {
@@ -267,12 +247,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
             if (binding.sex.isChecked) {
@@ -285,12 +260,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
             if (binding.sab.isChecked) {
@@ -303,12 +273,7 @@ class NewNotificationsFragment : ToolbarFragment() {
                 currentDate[Calendar.SECOND] = 0
                 currentDate[Calendar.MILLISECOND] = 0
 
-                alarmManager.setRepeating(
-                    AlarmManager.RTC,
-                    currentDate.timeInMillis,
-                    AlarmManager.INTERVAL_DAY * 7,
-                    pendingIntent
-                )
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC, currentDate.timeInMillis, pendingIntent)
             }
 
         } else{

@@ -34,9 +34,9 @@ interface RemoteApiService {
     suspend fun alterData(@Body request: SignUpRequest): Response<Boolean?>
 
     @POST("medic")
-    suspend fun registerDoctor(@Body request: RegisterDoctorRequest): Response<Boolean?>
+    suspend fun registerDoctor(@Header("code") code: String,@Header("documentNumber") documentNumber: String): Response<Boolean?>
 
     @DELETE("medic")
-    suspend fun deleteDoctor(@Body request: DeleteDoctorRequest): Response<Boolean?>
+    suspend fun deleteDoctor(@Header("documentNumber") documentNumber: String): Response<Boolean?>
 
 }

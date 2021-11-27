@@ -105,6 +105,7 @@
         android:text="Esqueci Minha Senha"
         android:layout_marginTop="@dimen/text_subheading"
         android:textColor="@color/white"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@id/password" />
 
     <Button

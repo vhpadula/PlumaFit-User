@@ -1,5 +1,6 @@
 package com.example.glicemapapp.ui.login
 
+import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,8 +25,11 @@ import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.test.core.app.ApplicationProvider
+import com.example.glicemapapp.data.models.Notification
+import com.example.glicemapapp.data.models.User
 import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.ui.main.home.HomeViewModel
+import com.google.gson.Gson
 
 
 class LoginFragment : Fragment() {
@@ -84,7 +88,7 @@ class LoginFragment : Fragment() {
                                     requireContext().getSharedPreferences("login", MODE_PRIVATE)
                                 val editor = preferences.edit()
                                 editor.putString("remember", "true")
-                                editor.putString("document", binding.emailEt.text.toString())
+                                editor.putString("document", it)
                                 editor.apply()
                                 val i = Intent(
                                     this.context,

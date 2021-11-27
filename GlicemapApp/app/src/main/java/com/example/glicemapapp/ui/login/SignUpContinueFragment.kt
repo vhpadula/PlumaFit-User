@@ -30,6 +30,7 @@ import androidx.test.core.app.ApplicationProvider
 import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.databinding.FragmentSignupBinding
 import com.example.glicemapapp.databinding.FragmentSignupContinueBinding
+import com.example.glicemapapp.ui.base.DateInputMask
 import com.example.glicemapapp.ui.base.ToolbarFragment
 
 
@@ -60,6 +61,10 @@ class SignUpContinueFragment : ToolbarFragment() {
 
 
     private fun setListeners() {
+
+       val mask = DateInputMask(binding.birthdateEt).listen()
+
+
         binding.run {
             confirmButton.setOnClickListener {
                 if (documentEt.text.isNullOrEmpty() || birthdateEt.text.isNullOrEmpty() || weightEt.text.toString().isNullOrEmpty() || heightEt.text.isNullOrEmpty() || sugarminEt.text.isNullOrEmpty() || sugarmaxEt.text.isNullOrEmpty()){
@@ -70,14 +75,10 @@ class SignUpContinueFragment : ToolbarFragment() {
                     ).show()
                 } else {
                     loginViewModel.documentNumber = documentEt.text.toString()
-                    loginViewModel.birthdate = birthdateEt.text.toString()
-                    for (i in 0..loginViewModel.birthdate.length-1){
-                        if (loginViewModel.birthdate[i] == '/'){
-                            val sb = StringBuilder(loginViewModel.birthdate).also { it.setCharAt(i, '-') }
-                            loginViewModel.birthdate = sb.toString()
-                        }
-
-                    }
+                    val sdf = SimpleDateFormat("dd/MM/yyyy")
+                    val sdfApi = SimpleDateFormat("yyyy-MM-dd")
+                    val date = sdf.parse(birthdateEt.text.toString())
+                    loginViewModel.birthdate = sdfApi.format(date)
                     loginViewModel.weight = weightEt.text.toString().toInt()
                     loginViewModel.height = heightEt.text.toString().toInt()
                     loginViewModel.sugarMin = sugarminEt.text.toString().toInt()
