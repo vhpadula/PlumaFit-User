@@ -1,6 +1,9 @@
 package com.example.glicemapapp.ui.main.notifications
 
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,6 +12,12 @@ import com.example.contadormtg.extracountersrv.ItemTouchHelperListener
 import com.example.glicemapapp.data.models.Notification
 import com.example.glicemapapp.databinding.NotificationItemBinding
 import java.util.*
+import android.preference.PreferenceManager
+
+import android.content.SharedPreferences
+import androidx.core.content.ContentProviderCompat.requireContext
+import com.example.glicemapapp.AlarmReceiver
+
 
 class NotificationsAdapter(val context: Context, private val itemDragListener: ItemDragListener) :
     RecyclerView.Adapter<NotificationsAdapter.ItemViewHolder>() ,ItemTouchHelperListener{
@@ -74,7 +83,20 @@ class NotificationsAdapter(val context: Context, private val itemDragListener: I
     }
 
     override fun onItemDismiss(viewHolder: RecyclerView.ViewHolder, position: Int) {
+
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val intent = Intent(context, AlarmReceiver::class.java)
+        intent.putExtra("id", items[position].id)
+        val pendingIntent = PendingIntent.getBroadcast(context, items[position].id.toInt(), intent, 0)
+        alarmManager.cancel(pendingIntent)
+        val preferences =
+            context.getSharedPreferences("notifications", Context.MODE_PRIVATE)
+        if(preferences.getString(items[position].id, null) != null){
+            preferences.edit().remove(items[position].id).apply()
+        }
+
         items.removeAt(position)
+
         notifyItemRemoved(position)
     }
 

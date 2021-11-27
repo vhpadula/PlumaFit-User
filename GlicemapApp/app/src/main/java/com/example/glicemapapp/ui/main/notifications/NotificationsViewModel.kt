@@ -1,14 +1,42 @@
 package com.example.glicemapapp.ui.main.notifications
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.app.Activity
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.example.glicemapapp.data.models.Notification
+import com.google.gson.Gson
+
 
 class NotificationsViewModel : ViewModel() {
 
-    var items = mutableListOf<Notification>( Notification("Pós Hora Extra", "05:00", " Dom Qua Sáb "),
-        Notification("Após Almoço", "13:00", "Todos os Dias"),
-        Notification("Antes da Festa", "08:00", "Só uma vez"),
-        Notification("Depois da Aula", "17:00", "Dias de Semana"))
+    lateinit var activity: Activity
+
+
+    var items = mutableListOf<Notification>()
+
+    fun setValues() {
+        val preferences =
+            activity.getSharedPreferences("notifications", Context.MODE_PRIVATE)
+        val keys = preferences.all
+        items = mutableListOf<Notification>()
+        for (entry in keys.entries) {
+            val gson = Gson()
+            val json = entry.value.toString()
+            val notification = gson.fromJson(json, Notification::class.java)
+            if (notification.id != null) {
+                if (items.isNullOrEmpty()) {
+                    items.add(notification)
+                } else {
+                    for (item in items) {
+                        if (item.id != notification.id) {
+                            items.add(notification)
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+    }
 }

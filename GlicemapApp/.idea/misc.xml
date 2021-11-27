@@ -7,6 +7,7 @@
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/drawable/rectangle_text_box.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/activity_login.xml" value="0.16822916666666668" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/activity_splash.xml" value="0.26403985507246375" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/blue_toolbar.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/calendar_day.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/collapsing_toolbar.xml" value="0.18" />
@@ -27,7 +28,7 @@
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_new_notifications.xml" value="0.22" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_notifications.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_report.xml" value="0.16" />
-        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_settings.xml" value="0.18" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_settings_delete_doctor.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_settings_new_doctor.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/fragment_settings_personal.xml" value="0.25" />
@@ -40,6 +41,8 @@
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/settings_item.xml" value="0.1859375" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/layout/toolbar.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.184375" />
+        <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.184375" />
         <entry key="..\:/Users/vhpad/Desktop/Glicemap%20App/GlicemapApp/app/src/main/res/xml/provider_paths.xml" value="0.16510416666666666" />
         <entry key="..\:/Users/vhpad/Desktop/GlicemapApp/app/src/main/res/drawable/bottom_nav_color_selector.xml" value="0.3828125" />
         <entry key="..\:/Users/vhpad/Desktop/GlicemapApp/app/src/main/res/layout/activity_main.xml" value="0.22" />

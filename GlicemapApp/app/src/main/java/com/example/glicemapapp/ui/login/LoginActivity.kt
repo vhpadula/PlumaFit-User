@@ -1,5 +1,6 @@
 package com.example.glicemapapp.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import com.example.glicemapapp.data.models.Doctor
 import com.example.glicemapapp.data.models.User
 import com.example.glicemapapp.databinding.ActivityLoginBinding
 import com.example.glicemapapp.databinding.ActivityMainBinding
+import com.example.glicemapapp.ui.main.MainActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 
@@ -31,6 +33,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+
 
 
     }

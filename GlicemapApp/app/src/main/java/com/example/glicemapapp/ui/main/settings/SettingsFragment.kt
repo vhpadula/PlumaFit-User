@@ -1,5 +1,7 @@
 package com.example.glicemapapp.ui.main.settings
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.glicemapapp.R
 import com.example.glicemapapp.ui.base.ToolbarFragment
 import com.example.glicemapapp.databinding.FragmentSettingsBinding
+import com.example.glicemapapp.ui.login.LoginActivity
 import com.example.glicemapapp.ui.main.MainActivity
 
 class SettingsFragment : ToolbarFragment() {
@@ -83,6 +86,20 @@ class SettingsFragment : ToolbarFragment() {
                     findNavController().navigate(com.example.glicemapapp.ui.main.settings.SettingsFragmentDirections.toNewDoctor())
                 }
 
+            }
+
+            logoutBt.setOnClickListener {
+                val preferences =
+                    requireContext().getSharedPreferences("login", Context.MODE_PRIVATE)
+                val editor = preferences.edit()
+                editor.putString("remember", "false")
+                editor.putString("document","")
+                editor.apply()
+                val i = Intent(
+                    requireContext(),
+                    LoginActivity::class.java
+                )
+                startActivity(i)
             }
         }
     }

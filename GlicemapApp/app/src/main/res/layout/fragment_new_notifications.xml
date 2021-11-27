@@ -30,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
    android:layout_marginStart="@dimen/margin_large"
         app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxStrokeColor="@color/DimmedBabyBlue"
         app:placeholderTextColor="@color/white"
         app:hintTextColor="@color/white">
 

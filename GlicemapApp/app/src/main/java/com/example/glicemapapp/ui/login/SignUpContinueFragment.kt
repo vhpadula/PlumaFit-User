@@ -1,6 +1,7 @@
 package com.example.glicemapapp.ui.login
 
 import android.app.Dialog
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -129,11 +130,16 @@ class SignUpContinueFragment : ToolbarFragment() {
         val dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.dialog_message_one)
         dialog.findViewById<Button>(R.id.yes).setOnClickListener {
+            val preferences =
+                requireContext().getSharedPreferences("login", Context.MODE_PRIVATE)
+            val editor = preferences.edit()
+            editor.putString("remember", "true")
+            editor.putString("document", loginViewModel.documentNumber)
+            editor.apply()
             val i = Intent(
                 this.context,
                 MainActivity::class.java
             )
-            i.putExtra("document", loginViewModel.documentNumber)
             startActivity(i)
         }
         dialog.findViewById<TextView>(R.id.title).text = "Cadastro Confirmado!"

@@ -1,5 +1,6 @@
 package com.example.glicemapapp.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-       cpf =  intent.extras?.getString("document")!!
+        val  preferences = getSharedPreferences("login", MODE_PRIVATE)
+        cpf = preferences.getString("document", "")!!
+
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 

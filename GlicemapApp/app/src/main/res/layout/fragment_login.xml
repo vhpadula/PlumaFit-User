@@ -22,7 +22,7 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/logo"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_XXlarge"
-        android:text="CPF"
+        android:text="CPF ou Email"
         android:textColor="@color/white"
         android:textSize="@dimen/text_subtitle"
         app:layout_constraintStart_toStartOf="@id/email"
@@ -61,7 +61,6 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
-            android:inputType="number"
             android:textColorHighlight="@color/white"/>
     </com.google.android.material.textfield.TextInputLayout>
 

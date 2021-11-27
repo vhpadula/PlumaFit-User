@@ -206,5 +206,16 @@
             app:layout_constraintTop_toBottomOf="@id/doctor_crm_tv" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <Button
+        android:id="@+id/logout_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Sair do App"
+        android:backgroundTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

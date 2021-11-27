@@ -33,11 +33,15 @@ class NotificationsFragment : ToolbarFragment(), ItemDragListener {
     ): View? {
         notificationsViewModel =
             ViewModelProvider(requireActivity()).get(NotificationsViewModel::class.java)
+        notificationsViewModel.activity=requireActivity()
+        notificationsViewModel.setValues()
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
         setAdapter()
         setupItemTouchHelper()
+
         binding.newMeasurementBt.setOnClickListener {
             findNavController().navigate(com.example.glicemapapp.ui.main.notifications.NotificationsFragmentDirections.toNewNotification())
         }

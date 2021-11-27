@@ -34,7 +34,7 @@ class SettingsDeleteDoctorFragment : ToolbarFragment() {
         savedInstanceState: Bundle?
     ): View? {
         settingsViewModel =
-            ViewModelProvider(this).get(SettingsViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(SettingsViewModel::class.java)
 
         _binding = FragmentSettingsDeleteDoctorBinding.inflate(inflater, container, false)
         val root: View = binding.root

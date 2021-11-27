@@ -37,7 +37,7 @@ class SettingsPersonalFragment : ToolbarFragment() {
         savedInstanceState: Bundle?
     ): View? {
         settingsViewModel =
-            ViewModelProvider(this).get(SettingsViewModel::class.java)
+            ViewModelProvider(requireActivity()).get(SettingsViewModel::class.java)
 
         _binding = FragmentSettingsPersonalBinding.inflate(inflater, container, false)
         val root: View = binding.root

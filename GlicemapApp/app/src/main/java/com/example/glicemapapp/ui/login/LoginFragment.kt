@@ -1,5 +1,6 @@
 package com.example.glicemapapp.ui.login
 
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,7 @@ import java.util.*
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.test.core.app.ApplicationProvider
 import com.example.glicemapapp.data.network.handleException
 import com.example.glicemapapp.ui.main.home.HomeViewModel
@@ -43,7 +45,6 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
         setListeners()
-
         return root
     }
 
@@ -53,25 +54,25 @@ class LoginFragment : Fragment() {
     }
 
 
-    private fun setListeners(){
+    private fun setListeners() {
         binding.loginButton.setOnClickListener {
-            loginUser(binding.emailEt.text.toString(),binding.passwordEt.text.toString())
+            loginUser(binding.emailEt.text.toString(), binding.passwordEt.text.toString())
         }
         binding.signupButton.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.toSignup())
         }
     }
 
-    private fun loginUser(login: String, password: String){
+    private fun loginUser(login: String, password: String) {
         binding.progressBar.visibility = View.VISIBLE
         binding.progressBar.bringToFront()
-        loginViewModel.loginUser(login,password).observe(viewLifecycleOwner){
+        loginViewModel.loginUser(login, password).observe(viewLifecycleOwner) {
             binding.progressBar.visibility = View.INVISIBLE
             val result = it?.let { result ->
                 when (result) {
                     is Result.Success -> {
                         result.data?.let {
-                            if (it== "0"){
+                            if (it == "0") {
 
                                 Snackbar.make(
                                     binding.root,
@@ -79,11 +80,16 @@ class LoginFragment : Fragment() {
                                     Snackbar.LENGTH_LONG
                                 ).show()
                             } else {
+                                val preferences =
+                                    requireContext().getSharedPreferences("login", MODE_PRIVATE)
+                                val editor = preferences.edit()
+                                editor.putString("remember", "true")
+                                editor.putString("document", binding.emailEt.text.toString())
+                                editor.apply()
                                 val i = Intent(
                                     this.context,
                                     MainActivity::class.java
                                 )
-                                i.putExtra("document", binding.emailEt.text.toString())
                                 startActivity(i)
                             }
 
