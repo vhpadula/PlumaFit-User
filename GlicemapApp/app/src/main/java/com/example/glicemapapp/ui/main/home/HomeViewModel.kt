@@ -24,10 +24,10 @@ class HomeViewModel : ViewModel() {
     fun loadDates(addMonth: Int): LiveData<Result<DatesResponse?>> {
         var year = currentDate.year
         var month = currentDate.monthValue
-        if (currentDate.monthValue == 12) {
+        if (currentDate.monthValue == 12 && addMonth == 1) {
             year += 1
             month = 1
-        } else if (currentDate.monthValue == 1) {
+        } else if (currentDate.monthValue == 1 && addMonth == -1) {
             year -= 1
             month = 12
         } else {

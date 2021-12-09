@@ -71,8 +71,25 @@ class SettingsPersonalFragment : ToolbarFragment() {
         binding.run {
             saveButton.setOnClickListener {
                 if(!binding.passwordEt.text.isNullOrEmpty()){
-                    if(binding.passwordEt.text == binding.newPasswordEt.text ){
+                    if(binding.passwordEt.text.toString() == binding.newPasswordEt.text.toString()){
+                        val sdfApi = SimpleDateFormat("yyyy-MM-dd")
+                        val sdf = SimpleDateFormat("dd/MM/yyyy")
+                        val date =   sdf.parse(birthdayEt.text.toString())
+                        val birthdate = sdfApi.format(date)
 
+                        alterData(SignUpRequest(
+                            birthdate = birthdate,
+                            crmMedic = "",
+                            documentNumber = settingsViewModel.user.documentNumber,
+                            email = emailEt.text.toString(),
+                            height = heightEt.text.toString().toInt(),
+                            lastName = surnameEt.text.toString(),
+                            name = nameEt.text.toString(),
+                            password = passwordEt.text.toString(),
+                            sugarMax = maxEt.text.toString().toInt(),
+                            sugarMin = minEt.text.toString().toInt(),
+                            weight = weightEt.text.toString().toFloat().roundToInt()
+                        ) )
                     } else {
                         Snackbar.make(
                             binding.root,
