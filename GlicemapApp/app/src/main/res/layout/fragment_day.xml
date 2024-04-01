@@ -52,7 +52,7 @@
         android:visibility="gone"
         android:layout_margin="@dimen/margin_Xlarge"
         tools:visibility="visible"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:text="Não há medições para esse dia :("/>
 
 

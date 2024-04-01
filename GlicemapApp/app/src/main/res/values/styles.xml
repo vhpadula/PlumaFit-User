@@ -5,13 +5,13 @@
 
     <style name="Toolbar.White">
         <item name="android:textSize">@dimen/text_headline</item>
-        <item name="android:textColor">@color/NavyBlue</item>
+        <item name="android:textColor">@color/Secondary</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Toolbar.White.Bottom">
         <item name="android:textSize">@dimen/text_subtitle</item>
-        <item name="android:textColor">@color/NavyBlue</item>
+        <item name="android:textColor">@color/Secondary</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -46,5 +46,8 @@
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
+    <style name="RoundedAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_dialog</item>
+    </style>
 
 </resources>

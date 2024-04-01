@@ -24,7 +24,7 @@
         app:layout_constraintTop_toBottomOf="@id/appBarWhite" />
 
     <TextView
-        android:id="@+id/circumstance_tv"
+        android:id="@+id/meal_tv"
         style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,14 +32,14 @@
         android:layout_marginTop="@dimen/margin_large_mediumX"
         android:layout_marginBottom="@dimen/margin_large_mediumX"
         android:text="@string/new_measure_circumstance"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_subheading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div1"
         tools:text="Ocasião" />
 
     <TextView
-        android:id="@+id/circumstance_sp"
+        android:id="@+id/meal_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large_mediumX"
@@ -48,7 +48,7 @@
         android:textColor="@color/Blacktext"
         android:textColorHighlight="@color/TransparentNavyBlue"
         android:textSize="@dimen/text_subtitle"
-        app:layout_constraintBaseline_toBaselineOf="@id/circumstance_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/meal_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div1"
         tools:text="Antes do Almoço" />
@@ -59,32 +59,32 @@
         android:layout_height="1dp"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/circumstance_tv" />
+        app:layout_constraintTop_toBottomOf="@id/meal_tv" />
 
     <TextView
-        android:id="@+id/sugar_level_tv"
+        android:id="@+id/time_of_day_tv"
         style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measure_sugar_level"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_subheading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div2"
         tools:text="Glicemia" />
 
     <TextView
-        android:id="@+id/sugar_level_et_tv"
+        android:id="@+id/duration_et_tv"
         style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginEnd="@dimen/margin_medium_large"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_headline"
-        app:layout_constraintBaseline_toBaselineOf="@id/sugar_level_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/time_of_day_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div2"
 
@@ -97,32 +97,32 @@
         android:layout_height="1dp"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/sugar_level_tv" />
+        app:layout_constraintTop_toBottomOf="@id/time_of_day_tv" />
 
     <TextView
-        android:id="@+id/insulin_tv"
+        android:id="@+id/type_of_meal_tv"
         style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measurement_insulin"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_subheading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div3"
         tools:text="Insulina Aplicada:" />
 
     <TextView
-        android:id="@+id/insulin_et_tv"
+        android:id="@+id/calories_et_tv"
         style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginEnd="@dimen/margin_medium_large"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_headline"
-        app:layout_constraintBaseline_toBaselineOf="@id/insulin_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/type_of_meal_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/div3"
         tools:text="1 UI" />
@@ -134,7 +134,7 @@
         android:layout_height="1dp"
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/insulin_tv" />
+        app:layout_constraintTop_toBottomOf="@id/type_of_meal_tv" />
 
     <TextView
         android:id="@+id/notes_tv"
@@ -144,7 +144,7 @@
         android:layout_marginVertical="@dimen/margin_large_mediumX"
         android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/new_measurement_notes"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_subheading"
         app:layout_constraintBaseline_toBaselineOf="@id/notes_et"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,7 +158,7 @@
         android:layout_marginVertical="@dimen/margin_medium"
         android:layout_marginEnd="@dimen/margin_medium"
         android:gravity="center"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:textSize="@dimen/text_subtitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

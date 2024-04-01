@@ -6,7 +6,7 @@
     android:layout_height="@dimen/toolbar_size"
     android:id="@+id/appBarBlue"
     app:elevation="0dp"
-    android:background="@color/RoyalBlue">
+    android:background="@color/Primary">
 
 
 

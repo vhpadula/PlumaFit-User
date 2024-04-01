@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Data Inicial"
         android:textSize="@dimen/text_headline"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         app:layout_constraintTop_toBottomOf="@id/appBarWhite"
         android:layout_marginTop="@dimen/margin_Xlarge"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,12 +41,12 @@
         app:layout_constraintStart_toStartOf="@id/start_date_tv"
         android:textSize="@dimen/text_subtitle"
         android:layout_marginTop="@dimen/margin_medium"
-        android:backgroundTint="@color/NavyBlue"
+        android:backgroundTint="@color/Secondary"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:textColor="@color/NavyBlue"/>
+        android:textColor="@color/Secondary"/>
 
     <TextView
         android:id="@+id/end_date_tv"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:text="Data Final"
         android:textSize="@dimen/text_headline"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         app:layout_constraintTop_toBottomOf="@id/start_date_dp"
         android:layout_marginTop="@dimen/margin_XXlarge"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,13 +68,13 @@
         app:layout_constraintTop_toBottomOf="@id/end_date_tv"
         app:layout_constraintStart_toStartOf="@id/end_date_tv"
         android:layout_marginTop="@dimen/margin_medium"
-        android:backgroundTint="@color/NavyBlue"
+        android:backgroundTint="@color/Secondary"
         android:clickable="false"
         android:textSize="@dimen/text_subtitle"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:textColor="@color/NavyBlue"/>
+        android:textColor="@color/Secondary"/>
 
 
 
@@ -88,8 +88,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/end_date_dp"
         android:layout_marginEnd="@dimen/margin_medium_large"
-        android:backgroundTint="@color/BlueGrotto"
-        android:background="@color/BlueGrotto"
+        android:backgroundTint="@color/Accent"
+        android:background="@color/Accent"
         app:borderWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

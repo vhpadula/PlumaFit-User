@@ -5,7 +5,7 @@
     android:id="@+id/home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/RoyalBlue"
+    android:background="@color/Primary"
     tools:context=".ui.main.home.HomeFragment">
 
     <TextView
@@ -38,10 +38,10 @@
         android:layout_height="wrap_content"
         app:previousButtonSrc="@drawable/chevron_left_24px"
         app:forwardButtonSrc="@drawable/chevron_right_24px"
-        app:headerColor="@color/RoyalBlue"
-        app:abbreviationsBarColor="@color/RoyalBlue"
+        app:headerColor="@color/Primary"
+        app:abbreviationsBarColor="@color/Primary"
         app:abbreviationsLabelsColor="@color/white"
-        app:pagesColor="@color/RoyalBlue"
+        app:pagesColor="@color/Primary"
         app:daysLabelsColor="@color/white"
         app:todayLabelColor="@color/white"
         app:type="one_day_picker"
@@ -49,7 +49,7 @@
         app:elevation="0dp"
         android:fadingEdgeLength="0dp"
         app:selectionColor="@color/white"
-        app:selectionLabelColor="@color/RoyalBlue"
+        app:selectionLabelColor="@color/Primary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -62,8 +62,8 @@
         app:layout_constraintTop_toBottomOf="@id/calendar_view"
         android:layout_marginBottom="@dimen/margin_medium_large"
         android:layout_marginEnd="@dimen/margin_medium_large"
-        android:backgroundTint="@color/BlueGrotto"
-        android:background="@color/BlueGrotto"
+        android:backgroundTint="@color/Accent"
+        android:background="@color/Accent"
         app:borderWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"/>
 

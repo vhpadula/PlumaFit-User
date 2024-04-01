@@ -2,15 +2,15 @@
     <!-- Base application theme. -->
     <style name="Theme.GlicemapApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/RoyalBlue</item>
-        <item name="colorPrimaryDark">@color/RoyalBlue</item>
-        <item name="colorAccent">@color/RoyalBlue</item>
-        <item name="colorPrimaryVariant">@color/NavyBlue</item>
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryDark">@color/Primary</item>
+        <item name="colorAccent">@color/Primary</item>
+        <item name="colorPrimaryVariant">@color/Secondary</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <item name="colorControlNormal">#c5c5c5</item>
-        <item name="colorControlActivated">@color/NavyBlue</item>
-        <item name="colorControlHighlight">@color/NavyBlue</item>
+        <item name="colorControlActivated">@color/Secondary</item>
+        <item name="colorControlHighlight">@color/Secondary</item>
 
         <!-- Customize your theme here. -->
         <item name="android:windowNoTitle">true</item>

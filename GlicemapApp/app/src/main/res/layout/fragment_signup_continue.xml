@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/notifications"
     tools:context=".ui.login.LoginFragment"
-    android:background="@color/RoyalBlue">
+    android:background="@color/Primary">
     <include layout="@layout/collapsing_toolbar_blue"/>
 
 
@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -112,7 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -146,7 +146,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -182,7 +182,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="36dp"
         app:layout_constraintStart_toEndOf="@id/sugarmin"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -218,7 +218,7 @@
         app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toStartOf="@id/sugarmax"
        android:layout_marginHorizontal="36dp"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -237,7 +237,7 @@
         android:id="@+id/confirm_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/NavyBlue"
+        android:backgroundTint="@color/Secondary"
         android:text="Confirmar"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

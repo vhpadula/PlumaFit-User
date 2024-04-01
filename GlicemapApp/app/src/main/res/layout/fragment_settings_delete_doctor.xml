@@ -30,7 +30,7 @@
         android:layout_marginTop="@dimen/margin_Xlarge"
         app:boxBackgroundColor="@color/Transparent"
         android:hint="Código"
-        app:hintTextColor="@color/NavyBlue"/>
+        app:hintTextColor="@color/Secondary"/>
 
 
 

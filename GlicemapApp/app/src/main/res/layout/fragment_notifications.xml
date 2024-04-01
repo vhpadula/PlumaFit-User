@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/notifications"
     tools:context=".ui.main.notifications.NotificationsFragment"
-    android:background="@color/RoyalBlue">
+    android:background="@color/Primary">
 
     <include layout="@layout/collapsing_toolbar_blue"/>
 
@@ -28,8 +28,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="@dimen/margin_medium_large"
         android:layout_marginEnd="@dimen/margin_medium_large"
-        android:backgroundTint="@color/BlueGrotto"
-        android:background="@color/BlueGrotto"
+        android:backgroundTint="@color/Accent"
+        android:background="@color/Accent"
         app:borderWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

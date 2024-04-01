@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.example.glicemapapp.ui.login.LoginFragment" >
+        android:name="com.example.plumaFitApp.ui.login.LoginFragment" >
 
 
         <action
@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/navigation_signup"
-        android:name="com.example.glicemapapp.ui.login.SignUpFragment"
+        android:name="com.example.plumaFitApp.ui.login.SignUpFragment"
         android:label="Conte-nos sobre você">
 
 
@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/navigation_signupcontinue"
-        android:name="com.example.glicemapapp.ui.login.SignUpContinueFragment"
+        android:name="com.example.plumaFitApp.ui.login.SignUpContinueFragment"
         android:label="Mais um pouquinho">
 
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="BabyBlue">#FFBFD7ED</color>
-    <color name="BlueGrotto">#FF60A3D9</color>
-    <color name="RoyalBlue">#FF0074B7</color>
-    <color name="NavyBlue">#FF003B73</color>
+    <color name="Accent">#FFFFF3B0</color>
+    <color name="Primary">#FF335C67</color>
+    <color name="Secondary">#FFE09F3E</color>
     <color name="TransparentNavyBlue">#88003B73</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

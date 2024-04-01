@@ -8,7 +8,7 @@
     app:elevation="0dp"
 
 
-    android:background="@color/white">
+    android:background="@color/Primary">
 
 
 
@@ -16,11 +16,12 @@
             android:id="@+id/innerToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:titleTextColor="@color/NavyBlue"
-            app:subtitleTextColor="@color/BlueGrotto"
+            app:titleTextColor="@color/Secondary"
+            app:subtitleTextColor="@color/Accent"
             app:titleTextAppearance="@style/Toolbar.White"
             android:layout_marginTop="@dimen/margin_medium_large"
             app:navigationIcon="@drawable/arrow_back_ios_black_24dp_3"
+            app:navigationIconTint="@color/Secondary"
 
             app:contentInsetStartWithNavigation="0dp">
         </androidx.appcompat.widget.Toolbar>

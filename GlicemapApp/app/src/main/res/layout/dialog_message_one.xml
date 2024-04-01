@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/rectangle_blue"
-    android:backgroundTint="@color/BlueGrotto">
+    android:backgroundTint="@color/Secondary">
 
     <ImageView
         android:id="@+id/icon"
@@ -49,7 +49,7 @@
         android:id="@+id/yes"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:backgroundTint="@color/NavyBlue"
+        android:backgroundTint="@color/Primary"
         android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_start"
-        android:name="com.example.glicemapapp.ui.main.home.StartFragment" >
+        android:name="com.example.plumaFitApp.ui.main.home.StartFragment" >
         <action
             android:id="@+id/to_navigation_home"
             app:destination="@id/navigation_home"/>
@@ -16,13 +16,30 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.glicemapapp.ui.main.home.HomeFragment"
+        android:name="com.example.plumaFitApp.ui.main.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/to_new_measurement"
-            app:destination="@id/navigation_new_measurement"
+            android:id="@+id/to_new_exercise"
+            app:destination="@id/navigation_new_exercise"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/to_new_emotion"
+            app:destination="@id/navigation_new_emotion"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+        <action
+            android:id="@+id/to_new_meal"
+            app:destination="@id/navigation_new_meal"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
@@ -31,10 +48,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_new_measurement"
-        android:name="com.example.glicemapapp.ui.main.home.NewMeasurementFragment"
-        android:label="@string/new_measurement_label"
-        tools:layout="@layout/fragment_new_measurement">
+        android:id="@+id/navigation_new_exercise"
+        android:name="com.example.plumaFitApp.ui.main.home.NewExerciseFragment"
+        android:label="Adicionar Exercício"
+        tools:layout="@layout/fragment_new_exercise">
         <action
             android:id="@+id/to_home"
             app:destination="@id/navigation_home"
@@ -45,14 +62,43 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_report"
-        android:name="com.example.glicemapapp.ui.main.report.ReportFragment"
+        android:id="@+id/navigation_new_emotion"
+        android:name="com.example.plumaFitApp.ui.main.home.NewEmotionFragment"
+        android:label="Adicionar Emoção"
+        tools:layout="@layout/fragment_new_emotion">
+        <action
+            android:id="@+id/to_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_new_meal"
+        android:name="com.example.plumaFitApp.ui.main.home.NewMealFragment"
+        android:label="Adicionar Refeição"
+        tools:layout="@layout/fragment_new_meal">
+        <action
+            android:id="@+id/to_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_gym"
+        android:name="com.example.plumaFitApp.ui.main.report.ReportFragment"
         android:label="@string/title_report"
         tools:layout="@layout/fragment_report" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.glicemapapp.ui.main.notifications.NotificationsFragment"
+        android:id="@+id/navigation_psico"
+        android:name="com.example.plumaFitApp.ui.main.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications">
         <action
@@ -66,12 +112,12 @@
 
     <fragment
         android:id="@+id/navigation_new_notification"
-        android:name="com.example.glicemapapp.ui.main.notifications.NewNotificationsFragment"
+        android:name="com.example.plumaFitApp.ui.main.notifications.NewNotificationsFragment"
         android:label="Adicionar Lembrete">
 
         <action
             android:id="@+id/to_notification"
-            app:destination="@id/navigation_notifications"
+            app:destination="@id/navigation_psico"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
@@ -81,8 +127,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_settings"
-        android:name="com.example.glicemapapp.ui.main.settings.SettingsFragment"
+        android:id="@+id/navigation_nutri"
+        android:name="com.example.plumaFitApp.ui.main.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings">
 
@@ -113,16 +159,16 @@
 
     <fragment
         android:id="@+id/navigation_settings_personal"
-        android:name="com.example.glicemapapp.ui.main.settings.SettingsPersonalFragment"
+        android:name="com.example.plumaFitApp.ui.main.settings.SettingsPersonalFragment"
         android:label="Dados Pessoais" />
 
     <fragment
         android:id="@+id/navigation_settings_new_doctor"
-        android:name="com.example.glicemapapp.ui.main.settings.SettingsNewDoctorFragment"
+        android:name="com.example.plumaFitApp.ui.main.settings.SettingsNewDoctorFragment"
         android:label="Meu Médico" />
 
     <fragment
         android:id="@+id/navigation_settings_delete_doctor"
-        android:name="com.example.glicemapapp.ui.main.settings.SettingsDeleteDoctorFragment"
+        android:name="com.example.plumaFitApp.ui.main.settings.SettingsDeleteDoctorFragment"
         android:label="Meu Médico" />
 </navigation>

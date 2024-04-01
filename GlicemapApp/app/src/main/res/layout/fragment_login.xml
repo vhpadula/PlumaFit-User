@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/notifications"
     tools:context=".ui.login.LoginFragment"
-    android:background="@color/RoyalBlue">
+    android:background="@color/Primary">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:placeholderTextColor="@color/white"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:hintTextColor="@color/white">
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:placeholderTextColor="@color/white"
         app:hintTextColor="@color/white">
@@ -116,7 +116,7 @@
        app:layout_constraintTop_toBottomOf="@id/forgot_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/NavyBlue"
+        android:backgroundTint="@color/Secondary"
         android:textColor="@color/white"
         android:text="Entrar"/>
 
@@ -128,7 +128,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@color/white"
-        android:textColor="@color/NavyBlue"
+        android:textColor="@color/Secondary"
         android:text="Cadastrar-se"/>
 
 

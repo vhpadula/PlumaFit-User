@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.glicemapapp">
+    package="com.example.plumaFitApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
@@ -30,7 +30,7 @@
 
         <provider
             android:name=".MyFileProvider"
-            android:authorities="com.example.glicemapapp.MyFileProvider"
+            android:authorities="com.example.plumaFitApp.MyFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

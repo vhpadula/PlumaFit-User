@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercício"
+        android:drawableRight="@drawable/ic_gym"
+        android:drawableTint="@color/Accent"
+        android:gravity="left"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emoção"
+        android:drawableRight="@drawable/ic_psico"
+        android:drawableTint="@color/Accent"
+        android:gravity="left"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refeição"
+        android:drawableRight="@drawable/ic_nutri"
+        android:drawableTint="@color/Accent"
+        android:gravity="left"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

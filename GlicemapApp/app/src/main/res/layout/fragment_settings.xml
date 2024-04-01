@@ -32,7 +32,7 @@
             android:src="@drawable/ic_person_black_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/div1"
-            app:tint="@color/NavyBlue" />
+            app:tint="@color/Secondary" />
 
         <TextView
             android:id="@+id/personal_data_tv"
@@ -41,7 +41,7 @@
             android:layout_margin="@dimen/text_subheading"
             android:layout_marginVertical="@dimen/text_subheading"
             android:text="Dados Pessoais"
-            android:textColor="@color/NavyBlue"
+            android:textColor="@color/Secondary"
             android:textSize="@dimen/text_headline"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/person_iv"
@@ -105,7 +105,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/div1"
-            app:tint="@color/NavyBlue" />
+            app:tint="@color/Secondary" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -134,7 +134,7 @@
             android:src="@drawable/ic_local_hospital_black_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/NavyBlue" />
+            app:tint="@color/Secondary" />
 
         <TextView
             android:id="@+id/doctor_data_tv"
@@ -143,7 +143,7 @@
             android:layout_margin="@dimen/text_subheading"
             android:layout_marginVertical="@dimen/text_subheading"
             android:text="Meu Médico"
-            android:textColor="@color/NavyBlue"
+            android:textColor="@color/Secondary"
             android:textSize="@dimen/text_headline"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/doctor_iv"
@@ -194,7 +194,7 @@
             app:layout_constraintBottom_toTopOf="@id/div3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/NavyBlue" />
+            app:tint="@color/Secondary" />
 
         <View
             android:id="@+id/div3"

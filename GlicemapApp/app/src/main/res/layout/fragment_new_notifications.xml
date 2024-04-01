@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/RoyalBlue">
+    android:background="@color/Primary">
 
 
 
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/name_tv"
         app:layout_constraintStart_toStartOf="parent"
    android:layout_marginStart="@dimen/margin_large"
-        app:boxBackgroundColor="@color/RoyalBlue"
+        app:boxBackgroundColor="@color/Primary"
         app:boxStrokeColor="@color/DimmedBabyBlue"
         app:placeholderTextColor="@color/white"
         app:hintTextColor="@color/white">
@@ -68,7 +68,7 @@
             app:layout_constraintTop_toBottomOf="@id/time_tv"
             app:layout_constraintStart_toStartOf="@id/time_tv"
             android:textColorHighlight="@color/white"
-            android:backgroundTint="@color/NavyBlue"
+            android:backgroundTint="@color/Secondary"
             android:clickable="false"
             android:cursorVisible="false"
             android:focusable="false"
@@ -223,7 +223,7 @@
         android:layout_height="wrap_content"
         android:text="Salvar"
         android:id="@+id/save_button"
-        android:backgroundTint="@color/NavyBlue"
+        android:backgroundTint="@color/Secondary"
         app:layout_constraintTop_toBottomOf="@id/checkboxes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
