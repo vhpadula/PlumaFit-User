@@ -42,7 +42,7 @@ class NotificationsFragment : ToolbarFragment(), ItemDragListener {
         setAdapter()
         setupItemTouchHelper()
 
-        binding.newMeasurementBt.setOnClickListener {
+        binding.newExerciseButton.setOnClickListener {
             findNavController().navigate(com.example.plumaFitApp.ui.main.notifications.NotificationsFragmentDirections.toNewNotification())
         }
         return root

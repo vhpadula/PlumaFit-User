@@ -114,21 +114,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/confirm_email_tv"
+        android:id="@+id/document_number_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
-        android:text="Confirmar Email"
+        android:text="CPF"
         android:textColor="@color/white"
         android:textSize="@dimen/text_subtitle"
         app:layout_constraintStart_toStartOf="@id/surname"
         app:layout_constraintTop_toBottomOf="@id/email" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirm_email"
+        android:id="@+id/document_number"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/confirm_email_tv"
+        app:layout_constraintTop_toBottomOf="@id/document_number_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/margin_large"
@@ -156,7 +156,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/text_subtitle"
         app:layout_constraintStart_toStartOf="@id/name"
-        app:layout_constraintTop_toBottomOf="@id/confirm_email" />
+        app:layout_constraintTop_toBottomOf="@id/document_number" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"

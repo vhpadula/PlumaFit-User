@@ -33,8 +33,7 @@ class NotificationsAdapter(val context: Context, private val itemDragListener: I
         fun bind(item: Notification) {
             binding.run {
                nameTv.text = item.name
-              timeTv.text = item.time
-               datesTv.text = item.dates
+
             }
         }
 
