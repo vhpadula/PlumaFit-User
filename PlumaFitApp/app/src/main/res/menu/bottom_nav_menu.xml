@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_pluma"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_gym"
+        android:icon="@drawable/ic_gym"
+        android:title="Gym" />
+
+    <item
+        android:id="@+id/navigation_psico"
+        android:icon="@drawable/ic_psico"
+        android:title="Psico" />
+
+    <item
+        android:id="@+id/navigation_nutri"
+        android:icon="@drawable/ic_nutri"
+        android:title="Nutri" />
+
+</menu>

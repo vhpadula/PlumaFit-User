@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium">
+
+    <TextView
+        android:id="@+id/type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Exercício"
+        android:textSize="@dimen/text_subheading"
+        android:textColor="@color/Secondary"
+        style="bold"/>
+
+
+    <TextView
+        android:id="@+id/situation_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toEndOf="@id/type_tv"
+        app:layout_constraintEnd_toStartOf="@id/type_of_meal_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Antes do almoço"
+        android:textSize="@dimen/text_subheading"
+        android:textColor="@color/Secondary"
+        android:text="@string/new_measure_sugar_level"
+        style="bold"/>
+
+    <TextView
+        android:id="@+id/sugar_level_number_tv"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Secondary"
+        android:textSize="24sp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@id/type_of_meal_tv"
+        app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="280dp"
+        tools:text="98 " />
+
+    <TextView
+        android:id="@+id/type_of_meal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sugar_level_number_tv"
+app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Insulina: 2 UI"
+        android:textSize="@dimen/text_subtitle"
+        android:textColor="@color/Secondary"
+
+
+        android:layout_marginEnd="@dimen/margin_medium_large"
+
+        style="bold"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

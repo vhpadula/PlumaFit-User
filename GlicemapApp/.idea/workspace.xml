@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/calendar_day.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/collapsing_toolbar_blue.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/collapsing_toolbar_white.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_message_one.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_message_two.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_message_two_red.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_sheet.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_day.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_gym.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_meals.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_measurement.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_new_emotion.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_new_exercise.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_new_meal.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_new_notifications.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_psico.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings_delete_doctor.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings_new_doctor.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings_personal.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_start.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/measurement_item.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/notification_item.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/professional_item.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/register_options.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/settings_item.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/nav_activity_login.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/nav_activity_main.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/nav_fragment_bottom_sheet.xml">
+        <config>
+          <theme>@style/Theme.GlicemapApp</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6136e2f0-5e85-4a3e-a897-5337cc3ddcd4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/plumaFitApp/HomeFragmentTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/plumaFitApp/HomeViewModelTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/plumaFitApp/ReportViewModelTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/ic_appicon-playstore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-playstore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/Repository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/DataRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/DatesResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/DeleteDoctorRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/DietMealsResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Doctor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Emotion.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Exercise.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Food.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/GetEmotionsResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/GetMedicinesResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/GetNutritionResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/GetUserResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Health.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/LoginRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/LoginResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Meal.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Measurement.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/MeasurementDetailResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/MeasurementDetails.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Medicine.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Notification.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/Nutrition.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/PhysicalActivitiesResponse.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/PhysicalActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/RegisterDoctorRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/SendMeasureRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/SignUpRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/models/User.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/network/ExceptionHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/network/NetworkUtil.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/network/RemoteApiService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/data/network/RetrofitBuilder.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/SplashActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/base/DateInputMask.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/base/LiveDataTestUtil.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/base/ToolbarFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/login/LoginActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/login/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/login/LoginViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/login/SignUpFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/gym/GymAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/gym/GymFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/gym/GymViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/BottomSheetFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/DayFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/HomeViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/MeasurementFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/MeasurementsAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/NewEmotionFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/NewExerciseFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/NewMealFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/StartFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/home/StartFragmentViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/meals/MealsAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/meals/MealsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/meals/MealsViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/psico/MedicineAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/psico/MedicineFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/psico/MedicineViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/settings/ProfessionalsAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/settings/SettingsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/settings/SettingsNewDoctorFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/plumaFitApp/ui/main/settings/SettingsViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/anim_close_scale.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/anim_fade_in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/anim_fade_out.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/anim_open_scale.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/anim_scale_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/bottom_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_down.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_left.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_right.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_in_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_down.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_right.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/slide_out_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_gym.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_nutri.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_pluma.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_psico.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_trash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/arrow_back_ios_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/arrow_back_ios_black_24dp_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/arrow_forward_ios_black_24dp_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chevron_left_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/chevron_right_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_gym.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_nutri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_pluma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_psico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rectangle_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rectangle_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rectangle_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rectangle_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/selected_date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/arrow_back_ios_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/arrow_back_ios_black_24dp_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/arrow_forward_ios_black_24dp_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/chevron_left_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/chevron_right_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_gym.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_nutri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_pluma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_psico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/rectangle_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/rectangle_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/rectangle_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/rectangle_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/selected_date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/arrow_back_ios_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/arrow_back_ios_black_24dp_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/arrow_forward_ios_black_24dp_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/chevron_left_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/chevron_right_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_gym.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_nutri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_pluma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_psico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/rectangle_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/rectangle_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/rectangle_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/rectangle_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/selected_date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/arrow_back_ios_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/arrow_back_ios_black_24dp_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/arrow_forward_ios_black_24dp_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/chevron_left_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/chevron_right_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_gym.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_nutri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_pluma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_psico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/rectangle_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/rectangle_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/rectangle_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/rectangle_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/selected_date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/arrow_back_ios_black_24dp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/arrow_back_ios_black_24dp_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/arrow_forward_ios_black_24dp_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/chevron_left_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/chevron_right_24px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/rectangle_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/rectangle_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/rectangle_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/rectangle_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/selected_date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bottom_nav_color_selector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_white_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_circle_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_done_white_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_error_outline_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_local_hospital_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_settings_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_timeline_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rectangle_text_box.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_dialog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/today_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/calendar_day.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/collapsing_toolbar_blue.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/collapsing_toolbar_white.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_message_one.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_message_two.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_message_two_red.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_sheet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_day.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_gym.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meals.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_measurement.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_new_emotion.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_new_exercise.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_new_meal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_new_notifications.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_psico.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings_delete_doctor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings_new_doctor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings_personal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_start.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/measurement_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/notification_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/professional_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/register_options.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/settings_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_appicon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_appicon_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_appicon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_appicon_foreground.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_appicon_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_appicon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_appicon_foreground.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_appicon_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_appicon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_appicon_foreground.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_appicon_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_appicon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_appicon_foreground.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_appicon_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_appicon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_appicon_foreground.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_appicon_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_activity_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_fragment_bottom_sheet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/ic_appicon_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/measurement_circumstances.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/provider_paths.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/plumaFitApp/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\victo\.android\avd\Pixel_3a_API_34_extension_level_7_x86_64.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2eRK3o5jK2mGVt9IWH1RmnKuGJm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/victo/Desktop/PlumaFit-User/PlumaFitApp",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\victo\Desktop\PlumaFit-User\GlicemapApp\app\src\main\res\layout" />
+      <recent name="C:\Users\victo\Desktop\PlumaFit-User\GlicemapApp\app\src\main\java\com\example\plumaFitApp\ui\main" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.plumaFitApp.ui.main.settings" />
+      <recent name="com.example.plumaFitApp.data.models" />
+      <recent name="com.example.glicemapapp.ui.main.home" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="PlumaFitApp.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6136e2f0-5e85-4a3e-a897-5337cc3ddcd4" name="Changes" comment="" />
+      <created>1711861754911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711861754911</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+</project>
