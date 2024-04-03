@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -18,161 +19,43 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
-        android:layout_width="150dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/appBarWhite"
-        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toStartOf="@id/surname"
         android:layout_marginHorizontal="@dimen/margin_medium_large"
-        app:boxBackgroundColor="@color/Transparent"
         android:hint="Nome"
-        app:hintTextColor="@color/Secondary">
+        app:boxBackgroundColor="@color/Transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:hintTextColor="@color/Secondary"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarWhite">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/surname"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/appBarWhite"
-        app:layout_constraintStart_toEndOf="@id/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
-
-        app:boxBackgroundColor="@color/Transparent"
-        android:hint="Sobrenome"
-        app:hintTextColor="@color/Secondary">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/surname_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/birthday"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/text_subheading"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:boxBackgroundColor="@color/Transparent"
-        android:hint="Data de Nascimento"
-        app:hintTextColor="@color/Secondary">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/birthday_et"
-            android:layout_width="match_parent"
-            android:inputType="date"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/height"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/birthday"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/text_subheading"
-        app:layout_constraintEnd_toStartOf="@id/weight"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
-        app:boxBackgroundColor="@color/Transparent"
-        android:hint="Altura (cm)"
-        app:hintTextColor="@color/Secondary">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/height_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/weight"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/birthday"
-        app:layout_constraintStart_toEndOf="@id/height"
-        android:layout_marginTop="@dimen/text_subheading"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:boxBackgroundColor="@color/Transparent"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
-        android:hint="Peso (kg)"
-        app:hintTextColor="@color/Secondary">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/weight_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/min"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/weight"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/text_subheading"
-      app:layout_constraintEnd_toStartOf="@id/max"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
-        app:boxBackgroundColor="@color/Transparent"
-        android:hint="Glicemia Alvo Mínima"
-        app:hintTextColor="@color/Secondary">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/min_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/max"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
-        app:layout_constraintTop_toBottomOf="@id/weight"
-        android:layout_marginTop="@dimen/text_subheading"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/min"
-        app:boxBackgroundColor="@color/Transparent"
-        android:hint="Glicemia Alvo Máxima"
-        app:hintTextColor="@color/Secondary">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/max_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="320dp"
-        android:layout_marginHorizontal="@dimen/margin_medium_large"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/min"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/text_subheading"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:boxBackgroundColor="@color/Transparent"
+        android:layout_marginHorizontal="@dimen/margin_medium_large"
         android:hint="Email"
-        app:hintTextColor="@color/Secondary">
+        app:boxBackgroundColor="@color/Transparent"
+        app:hintTextColor="@color/Secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="24dp"
+        tools:layout_editor_absoluteY="333dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

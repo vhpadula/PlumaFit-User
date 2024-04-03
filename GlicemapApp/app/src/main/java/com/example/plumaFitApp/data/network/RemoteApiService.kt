@@ -23,9 +23,9 @@ interface RemoteApiService {
     suspend fun sendMeasurement (@Body request: SendMeasureRequest): Response<Boolean?>
 
     @POST("login")
-    suspend fun loginUser(@Body request: LoginRequest): Response<String?>
+    suspend fun loginUser(@Body request: LoginRequest): Response<LoginResponse?>
 
-    @POST("sign-up")
+    @POST("/authentication-service/signup")
     suspend fun registerUser(@Body request: SignUpRequest): Response<Boolean?>
 
     @PUT("info")
@@ -37,4 +37,53 @@ interface RemoteApiService {
     @DELETE("medic")
     suspend fun deleteDoctor(@Header("documentNumber") documentNumber: String): Response<Boolean?>
 
+    @GET("user-service/nutrition?")
+    suspend fun getNutritionData(
+        @Query("from") from: String,
+        @Query("to") to: String,
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<Nutrition>
+
+    @GET("user-service/health?")
+    suspend fun getHealthData(
+        @Query("from") from: String,
+        @Query("to") to: String,
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<Nutrition>
+
+    @GET("user-service/emotion?")
+    suspend fun getEmotionData(
+        @Query("from") from: String,
+        @Query("to") to: String,
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<Nutrition>
+
+    @GET("user-service/physical-activity?")
+    suspend fun getPhysicalActivityData(
+        @Query("from") from: String,
+        @Query("to") to: String,
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<PhysicalActivity>
+    @GET("nutrition-service/nutrition")
+    suspend fun getDietMeals(
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<DietMealsResponse>
+
+
+    @GET("physical-activity-service/physical-activity")
+    suspend fun getPhysicalActivities(
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<PhysicalActivitiesResponse>
+
+    @GET("/psychological-service/psychological")
+    suspend fun getMedicines(
+        @Header("accessToken") accessToken: String,
+        @Header("sessionData") sessionData: String
+    ): Response<GetMedicinesResponse>
 }

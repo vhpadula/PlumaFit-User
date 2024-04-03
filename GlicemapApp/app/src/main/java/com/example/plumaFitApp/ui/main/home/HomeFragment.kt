@@ -43,9 +43,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         setListeners()
-        loadDates(0)
-
-        binding.welcomeText.text = context?.getString(R.string.welcome_text,activity.user?.name)
+        setCalendar(homeViewModel.setCalendarData(DatesResponse(listOf("01-01-2000"))))
+//        binding.welcomeText.text = context?.getString(R.string.welcome_text,activity.user?.name)
         return root
     }
 
@@ -54,42 +53,11 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun loadDates(addMonth: Int){
-        binding.progressBar.visibility = View.VISIBLE
-        binding.progressBar.bringToFront()
-        homeViewModel.loadDates(addMonth).observe(viewLifecycleOwner){
-            binding.progressBar.visibility = View.INVISIBLE
-            val result = it?.let { result ->
-                when (result) {
-                    is Result.Success -> {
-                        result.data?.let {
-                            setCalendar(homeViewModel.setCalendarData(it))
-                            true
-                        } ?: false
-                    }
-                    is Result.Error -> {
-                        Snackbar.make(
-                            binding.root,
-                            handleException(result.exception.message.toString()),
-                            Snackbar.LENGTH_LONG
-                        ).show()
-                        setCalendar(homeViewModel.setCalendarData(DatesResponse(listOf("01-01-2000"))))
-                        false
-                    }
-                }
-            }
-        }
-    }
 
     private fun setCalendar(events: List<EventDay>) {
         val calendarView: CalendarView = binding.calendarView as CalendarView
         calendarView.setEvents(events)
-        calendarView.setOnForwardPageChangeListener {
-            loadDates(1)
-        }
-        calendarView.setOnPreviousPageChangeListener {
-            loadDates(-1)
-        }
+
         calendarView.setOnDayClickListener {
             val dialog = BottomSheetFragment()
             val formatDateDay = SimpleDateFormat("dd", Locale("pt","BR"))
@@ -107,9 +75,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun setListeners(){
-//        binding.newMeasurementBt.setOnClickListener {
-//
-//        }
+        binding.settingsBt.setOnClickListener{
+            findNavController().navigate(com.example.plumaFitApp.ui.main.home.HomeFragmentDirections.toSettings())
+        }
 
         binding.newMeasurementBt.setOnClickListener {
             val dialogView = LayoutInflater.from(context).inflate(R.layout.register_options, null)

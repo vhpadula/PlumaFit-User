@@ -14,9 +14,9 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="320dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/logo"
+        android:src="@mipmap/ic_appicon"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

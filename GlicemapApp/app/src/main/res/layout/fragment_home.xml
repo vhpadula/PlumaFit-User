@@ -21,6 +21,18 @@
         android:text="@string/welcome_text"
         android:textStyle="bold"/>
 
+    <ImageView
+        android:id="@+id/settings_bt"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_settings_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:tint="@color/white"/>
+
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
@@ -57,7 +69,7 @@
         android:id="@+id/new_measurement_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tint="@color/white"
+        app:tint="@color/Primary"
         android:src="@drawable/ic_add_white_24dp"
         app:layout_constraintTop_toBottomOf="@id/calendar_view"
         android:layout_marginBottom="@dimen/margin_medium_large"

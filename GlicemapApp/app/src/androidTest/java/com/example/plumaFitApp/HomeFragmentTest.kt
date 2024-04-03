@@ -12,7 +12,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.plumaFitApp.R
 import com.example.plumaFitApp.data.models.User
 import com.example.plumaFitApp.ui.main.home.HomeViewModel
-import com.example.plumaFitApp.ui.main.settings.SettingsPersonalFragment
 import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

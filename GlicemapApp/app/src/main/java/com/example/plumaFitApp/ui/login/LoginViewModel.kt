@@ -10,23 +10,14 @@ import com.example.plumaFitApp.data.models.*
 class LoginViewModel : ViewModel() {
     private val repository = Repository
     var name = ""
-    var lastName=""
     var documentNumber = ""
-    var email = ""
     var password = ""
-    var birthdate= ""
-    var height = 0
-    var weight = 0
-    var sugarMin = 0
-    var sugarmax = 0
 
     fun loginUser(
-        login: String,
-        password: String
-    ): LiveData<Result<String?>> {
+    ): LiveData<Result<LoginResponse?>> {
 
         return repository.loginUser(
-            LoginRequest(login,password)
+            LoginRequest(documentNumber,password, role="USER")
         )
     }
 
@@ -34,7 +25,7 @@ class LoginViewModel : ViewModel() {
 
     ): LiveData<Result<Boolean?>> {
 
-        return repository.registerUser(SignUpRequest(birthdate, null, documentNumber, email, height, lastName, name, password, sugarmax, sugarMin, weight))
+        return repository.registerUser(SignUpRequest(username = documentNumber, password = password, email = name, documentNumber = documentNumber, role = "USER"))
     }
 
 

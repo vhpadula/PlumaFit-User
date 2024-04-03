@@ -42,6 +42,8 @@ class HomeViewModel : ViewModel() {
         repository.getMeasurementDetails(user.documentNumber, date)
 
 
+
+
     fun setCalendarData(_dates: DatesResponse): MutableList<EventDay> {
         val dates = _dates.dates
         val sdf = SimpleDateFormat("yyyy-MM-dd")

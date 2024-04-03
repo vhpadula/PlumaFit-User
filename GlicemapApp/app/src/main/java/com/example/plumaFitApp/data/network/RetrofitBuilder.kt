@@ -12,7 +12,7 @@ object RetrofitBuilder {
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         val httpClient = OkHttpClient.Builder()
         httpClient.addInterceptor(logging)
-        return Retrofit.Builder().baseUrl("https://glicemap-backend.azurewebsites.net/app/")
+        return Retrofit.Builder().baseUrl("url")
             .addConverterFactory(GsonConverterFactory.create()).client(httpClient.build())
             .build()
     }

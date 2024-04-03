@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val repository = Repository
-    private lateinit var cpf: String
+
     var user: User? = null
     var doctor: Doctor? = null
 
@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val  preferences = getSharedPreferences("login", MODE_PRIVATE)
-        cpf = preferences.getString("document", "")!!
+        repository.accessToken = preferences.getString("accessToken", "")!!
+        repository.sessionData = preferences.getString("sessionData", "")!!
 
 
 
@@ -46,12 +47,7 @@ class MainActivity : AppCompatActivity() {
             "Victor",
             "Padula",
             "123456",
-            "29072000",
-            "123",
-            "89",
-            "123",
-            "123",
-            "123"
+
         )
 //        binding.progressBar.visibility = View.VISIBLE
 //        binding.progressBar.bringToFront()

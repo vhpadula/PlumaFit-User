@@ -3,26 +3,14 @@ package com.example.plumaFitApp.data.models
 import com.google.gson.annotations.SerializedName
 
 data class SignUpRequest (
-    @SerializedName("birthdate")
-    val birthdate: String,
-    @SerializedName("crmMedic")
-    val crmMedic: String?,
-    @SerializedName("documentNumber")
-    val documentNumber: String,
-    @SerializedName("email")
-    val email: String,
-    @SerializedName("height")
-    val height: Int,
-    @SerializedName("lastName")
-    val lastName: String,
-    @SerializedName("name")
-    val name: String,
+    @SerializedName("username")
+    val username: String,
     @SerializedName("password")
     val password: String,
-    @SerializedName("sugarMax")
-    val sugarMax: Int,
-    @SerializedName("sugarMin")
-    val sugarMin: Int,
-    @SerializedName("weight")
-    val weight: Int
+    @SerializedName("email")
+    val email: String,
+    @SerializedName("documentNumber")
+    val documentNumber: String,
+    @SerializedName("role")
+    val role: String,
 )

@@ -4,7 +4,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.plumaFitApp.data.Result
 import com.example.plumaFitApp.data.models.User
 import com.example.plumaFitApp.ui.base.getOrAwaitValue
-import com.example.plumaFitApp.ui.main.report.ReportViewModel
+import com.example.plumaFitApp.ui.main.gym.ReportViewModel
 import junit.framework.TestCase
 import org.junit.Before
 import org.junit.Test

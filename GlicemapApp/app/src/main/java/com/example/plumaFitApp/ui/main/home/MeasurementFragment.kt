@@ -7,9 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.plumaFitApp.R
+import com.example.plumaFitApp.data.Result
+import com.example.plumaFitApp.data.network.handleException
 import com.example.plumaFitApp.databinding.FragmentMeasurementBinding
+import com.google.android.material.snackbar.Snackbar
 
 
 class MeasurementFragment : Fragment() {
@@ -67,6 +73,8 @@ class MeasurementFragment : Fragment() {
     private fun setListeners() {
 
     }
+
+
 
 
 }
