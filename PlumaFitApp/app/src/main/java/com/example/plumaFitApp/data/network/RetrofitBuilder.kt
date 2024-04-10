@@ -12,7 +12,7 @@ object RetrofitBuilder {
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         val httpClient = OkHttpClient.Builder()
         httpClient.addInterceptor(logging)
-        return Retrofit.Builder().baseUrl("http://35.198.63.16/")
+        return Retrofit.Builder().baseUrl("http://35.247.202.166/")
             .addConverterFactory(GsonConverterFactory.create()).client(httpClient.build())
             .build()
     }
